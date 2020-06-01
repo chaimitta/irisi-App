@@ -1,0 +1,2 @@
+[2020-05-30 18:44:24] local.ERROR: SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ (SQL: select * from `users` where `email` = f@f.f limit 1) null 
