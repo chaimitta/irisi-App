@@ -15,17 +15,13 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:guithub-irisi-App" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/23poygNKW7siJ28Aba6HkVjWMs0E9C9x3cyocwML" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/eXGhhOx5T6pD2GR8s7EcCiTaHj7NtpXOSZaUrsvk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +186,7 @@
       <workItem from="1590961754426" duration="2288000" />
       <workItem from="1591003938966" duration="17512000" />
       <workItem from="1591037059889" duration="2709000" />
-      <workItem from="1591041144941" duration="1527000" />
+      <workItem from="1591041144941" duration="1967000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1591028638454</created>
@@ -199,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591028638454</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1591046245239</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591046245240</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +254,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="493" y="276" key="#Composer/0.0.1366.768@0.0.1366.768" timestamp="1591036851127" />
+    <state x="568" y="226" key="#Notifications" timestamp="1591046423724">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="568" y="226" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1591046423724" />
     <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1590349265838">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -297,5 +304,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1591039109889" />
+    <state x="378" y="152" key="git4idea.merge.GitPullDialog" timestamp="1591046407388">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1591046407388" />
   </component>
 </project>
