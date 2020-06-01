@@ -56,11 +56,14 @@
                 <?php if(auth()->guard()->guest()): ?>
                      <li class="menu-active"><a href="<?php echo e(url('/')); ?>">Accueil</a></li>
                      <li><a href="<?php echo e(route('login')); ?>">Connexion</a></li>
-                    <?php if(Route::has('register')): ?>
+
+
+
+
+
                         <li>
-                        <a href="<?php echo e(route('register')); ?>" >Inscription</a>
+                        <a href="<?php echo e(url('/check')); ?>" >Inscription</a>
                         </li>
-                    <?php endif; ?>
                     <li><a href="<?php echo e(url('/contact')); ?>">Contact</a></li>
                 <?php else: ?>
                     <li class="menu-active"><a href="<?php echo e(url('/dashboard')); ?>">Accueil</a></li>
