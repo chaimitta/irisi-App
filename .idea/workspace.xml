@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="74579f94-c97e-4b9a-a128-7f8a4e976aea" name="Default Changelist" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/cache/packages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap/cache/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/4EakNVDKK7jIvLsSrmJJnpCRusH7fWXHaqt9MX4E" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/oWrStXQFKuKEUdI6D2ZrhX3ibY28wzzkPu27hQNn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/11da81ee42a00eb2e3f29f33208afc6713410f40.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/27bb1a5a6e7ff1e83102f3d10716c98be7b07d56.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/281c7d6cd3e28d9a25156294e3fbb5c33e41e5ec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/2db2108afec5e71c060ab8680c234cf4d83d28ad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/3d865ffe117e28f9214c005460887da4e46dc795.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/65a8b8cbbc0bd35439f0779c823004a9752c35bf.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/6f1a512614b13098e4dda2041affd731c0bdcf4a.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/73d7d5b4107e68b3e1a6206f772c2f23f7b9063d.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/83096272bc7d81b8992ee381439998597c3c4049.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/8c525a74bd5f9c9a7a8b2618b4b73620e589f455.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/b750545e89e0604d4bb2f208d9892f561ffa7350.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/framework/views/f4a1f8667b3a0a530af8a69b1e58bf625582cb35.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-05-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-05-24.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-05-25.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-05-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-06-01.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1cJNtf4I8NQVyPuM8zASTnha4Me" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Chaimaa\irisi-App\public\img" />
+      <recent name="C:\Users\Chaimaa\irisi-App\public\js" />
+      <recent name="C:\Users\Chaimaa\irisi-App\public\css" />
+      <recent name="C:\Users\Chaimaa\irisi-App\public" />
+      <recent name="C:\Users\Chaimaa\irisi-App\public\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Chaimaa\irisi-App\public\img" />
+      <recent name="C:\Users\Chaimaa\irisi-App\resources" />
+      <recent name="C:\Users\Chaimaa\irisi-App\resources\views\Dashboard" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74579f94-c97e-4b9a-a128-7f8a4e976aea" name="Default Changelist" comment="" />
+      <created>1590242951841</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590242951841</updated>
+      <workItem from="1590242958787" duration="692000" />
+      <workItem from="1590244127090" duration="11567000" />
+      <workItem from="1590272438426" duration="11869000" />
+      <workItem from="1590328329411" duration="9191000" />
+      <workItem from="1590340813877" duration="14959000" />
+      <workItem from="1590359366415" duration="2400000" />
+      <workItem from="1590404964762" duration="7188000" />
+      <workItem from="1590424687068" duration="21346000" />
+      <workItem from="1590482847403" duration="3110000" />
+      <workItem from="1590863656430" duration="3869000" />
+      <workItem from="1590961754426" duration="2288000" />
+      <workItem from="1591003938966" duration="20100000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1591028638454</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591028638454</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Deployment" timestamp="1591039178341">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Deployment/0.0.1366.728@0.0.1366.728" timestamp="1591039178341" />
+    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1590349265838">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1590349265838" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590349781265">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590349781265" />
+    <state x="561" y="254" key="Github.CreateGistDialog" timestamp="1591027767094">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="561" y="254" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1591027767094" />
+    <state x="561" y="261" key="Github.ShareDialog" timestamp="1591031654372">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="561" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1591031654372" />
+    <state x="457" y="68" key="Github.UntrackedFilesDialog" timestamp="1591026608194">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="457" y="68" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591026608194" />
+    <state x="184" y="8" key="SettingsEditor" timestamp="1591027583481">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591027583481" />
+    <state x="513" y="233" key="VCS.EditChangelistDialog" timestamp="1591039017465">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="513" y="233" key="VCS.EditChangelistDialog/0.0.1366.728@0.0.1366.728" timestamp="1591039017465" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1591034004172">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591034004172" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1591039116289">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1591039116289" />
+    <state x="378" y="152" key="git4idea.merge.GitPullDialog" timestamp="1591040113467">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1591040113467" />
+  </component>
+</project>

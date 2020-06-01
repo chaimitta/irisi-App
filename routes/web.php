@@ -20,7 +20,7 @@ Route::get('/','WelcomeController@index')->name('welcome.show');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard.show');
 Auth::routes();
-
+//comment
 
 
 
