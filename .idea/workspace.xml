@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:guithub-irisi-App" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="74579f94-c97e-4b9a-a128-7f8a4e976aea" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap/cache/packages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap/cache/services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/4EakNVDKK7jIvLsSrmJJnpCRusH7fWXHaqt9MX4E" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/sessions/oWrStXQFKuKEUdI6D2ZrhX3ibY28wzzkPu27hQNn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/11da81ee42a00eb2e3f29f33208afc6713410f40.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/27bb1a5a6e7ff1e83102f3d10716c98be7b07d56.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/281c7d6cd3e28d9a25156294e3fbb5c33e41e5ec.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/2db2108afec5e71c060ab8680c234cf4d83d28ad.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/3d865ffe117e28f9214c005460887da4e46dc795.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/65a8b8cbbc0bd35439f0779c823004a9752c35bf.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/6f1a512614b13098e4dda2041affd731c0bdcf4a.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/73d7d5b4107e68b3e1a6206f772c2f23f7b9063d.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/83096272bc7d81b8992ee381439998597c3c4049.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/8c525a74bd5f9c9a7a8b2618b4b73620e589f455.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/b750545e89e0604d4bb2f208d9892f561ffa7350.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/framework/views/f4a1f8667b3a0a530af8a69b1e58bf625582cb35.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-05-23.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-05-24.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-05-25.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-05-30.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-06-01.log" afterDir="false" />
+    <list default="true" id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +38,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Moïse Gui" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -167,7 +172,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="74579f94-c97e-4b9a-a128-7f8a4e976aea" name="Default Changelist" comment="" />
+      <changelist id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="initial commit" />
       <created>1590242951841</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -183,7 +188,8 @@
       <workItem from="1590482847403" duration="3110000" />
       <workItem from="1590863656430" duration="3869000" />
       <workItem from="1590961754426" duration="2288000" />
-      <workItem from="1591003938966" duration="20100000" />
+      <workItem from="1591003938966" duration="17512000" />
+      <workItem from="1591037059889" duration="2709000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1591028638454</created>
@@ -198,15 +204,46 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="22" key="#Deployment" timestamp="1591039178341">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="493" y="276" key="#Composer" timestamp="1591036851127">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="22" key="#Deployment/0.0.1366.728@0.0.1366.728" timestamp="1591039178341" />
+    <state x="493" y="276" key="#Composer/0.0.1366.768@0.0.1366.768" timestamp="1591036851127" />
     <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1590349265838">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -215,6 +252,15 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590349781265" />
+    <state x="327" y="89" width="749" height="475" key="CommitChangelistDialog2" timestamp="1591039365972">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="327" y="89" width="749" height="475" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1591039365972" />
+    <state x="255" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1591037590593" />
+    <state x="76" y="58" key="DiffContextDialog" timestamp="1591037559322">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="76" y="58" key="DiffContextDialog/0.0.1366.768@0.0.1366.768" timestamp="1591037559322" />
     <state x="561" y="254" key="Github.CreateGistDialog" timestamp="1591027767094">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -227,25 +273,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="457" y="68" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591026608194" />
+    <state x="502" y="40" key="RollbackChangesDialog" timestamp="1591038856684">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="502" y="40" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591038856684" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1591027583481">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591027583481" />
-    <state x="513" y="233" key="VCS.EditChangelistDialog" timestamp="1591039017465">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1591038122191">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591031819706" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1591038122191" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1591039109889">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="513" y="233" key="VCS.EditChangelistDialog/0.0.1366.728@0.0.1366.728" timestamp="1591039017465" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1591034004172">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591034004172" />
-    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1591039116289">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1591039116289" />
-    <state x="378" y="152" key="git4idea.merge.GitPullDialog" timestamp="1591040113467">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="378" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1591040113467" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1591039109889" />
   </component>
 </project>
