@@ -56,11 +56,14 @@
                 @guest
                      <li class="menu-active"><a href="{{ url('/') }}">Accueil</a></li>
                      <li><a href="{{ route('login') }}">Connexion</a></li>
-                    @if (Route::has('register'))
+{{--                    @if (Route::has('register'))--}}
+{{--                        <li>--}}
+{{--                        <a href="{{ route('register') }}" >Inscription</a>--}}
+{{--                        </li>--}}
+{{--                    @endif--}}
                         <li>
-                        <a href="{{ route('register') }}" >Inscription</a>
+                        <a href="{{ url('/check') }}" >Inscription</a>
                         </li>
-                    @endif
                     <li><a href="{{ url('/contact') }}">Contact</a></li>
                 @else
                     <li class="menu-active"><a href="{{ url('/dashboard') }}">Accueil</a></li>

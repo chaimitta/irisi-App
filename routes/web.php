@@ -16,6 +16,10 @@
 });*/
 
 Route::get('/','WelcomeController@index')->name('welcome.show');
+
+Route::get('/check','CheckController@index')->name('check.show');
+Route::post('/check','CheckController@validator')->name('checkPost.show');
+
 //Route::post('/','WelcomeController@store')->name('login.show');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard.show');
