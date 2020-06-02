@@ -38,6 +38,11 @@
 
     <!-- Main Stylesheet File -->
     <link href="<?php echo e(asset('css/style.css')); ?>" rel="stylesheet">
+    <!--Dashboard links-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 </head>
 <body>
@@ -45,7 +50,7 @@
 <header id="header" class="header header-hide">
     <div class="container">
 
-        <div id="logo" class="pull-left">
+        <div id="logo" class="pull-left pl-5" style="margin-left: 45px;">
             <!--<h1><a href="#body" class="scrollto"><span>e</span>Startup</a></h1>-->
             <!-- Uncomment below if you prefer to use an image logo -->
             <a href="<?php echo e(url('/')); ?>"><img class="w-25" src="<?php echo e(url('img/logo.png')); ?>" alt="IRISI-App" title="IRISI-App" /></a>
@@ -54,14 +59,17 @@
         <nav id="nav-menu-container">
             <ul class="nav-menu">
                 <?php if(auth()->guard()->guest()): ?>
-                     <li class="menu-active"><a href="<?php echo e(url('/')); ?>">Accueil</a></li>
-                     <li><a href="<?php echo e(route('login')); ?>">Connexion</a></li>
-                    <?php if(Route::has('register')): ?>
-                        <li>
-                        <a href="<?php echo e(route('register')); ?>" >Inscription</a>
+                     <li id="accueil" class="menu-active"><a href="<?php echo e(url('/')); ?>">Accueil</a></li>
+                     <li id="connexion"><a href="<?php echo e(route('login')); ?>">Connexion</a></li>
+
+
+
+
+
+                        <li id="inscription">
+                        <a href="<?php echo e(url('/check')); ?>" >Inscription</a>
                         </li>
-                    <?php endif; ?>
-                    <li><a href="<?php echo e(url('/contact')); ?>">Contact</a></li>
+                    <li id="contact"><a href="<?php echo e(url('/contact')); ?>">Contact</a></li>
                 <?php else: ?>
                     <li class="menu-active"><a href="<?php echo e(url('/dashboard')); ?>">Accueil</a></li>
                     <li class="menu-has-children"> <a href="#"><?php echo e(Auth::user()->nom); ?> <?php echo e(Auth::user()->prenom); ?></a><span class="caret"></span>

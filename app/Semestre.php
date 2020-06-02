@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Professeur extends Model
+class Semestre extends Model
 {
-    public function user(){
-        return $this->belongsTo(User::class);
+    public function annee_unvi(){
+        return $this->belongsTo(Annee_univ::class);
     }
 
     public function module(){
