@@ -6,13 +6,12 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
-class RegisterController extends Controller
+class Old_register extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -62,9 +61,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'nom' => ['required', 'string', 'max:255'],
+            'prenom' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'login' => ['required', 'string', 'max:255','unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'tel' => ['required', 'string', 'max:255'],
+            //'categorie' => ['required', 'string', 'max:255'],
+            'image' => ['required', 'string','max:255'],
         ]);
     }
 
@@ -74,19 +78,17 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function update(array $data)
+    protected function create(array $data)
     {
-        return DB::table('users')->where('id', Session::get('user_id'))
-            ->update([
+        return User::create([
+            'nom' => $data['nom'],
+            'prenom' => $data['prenom'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'tel' => $data['tel'],
+            //'categorie' => $data['categorie'],
+            'image' => $data['image'],
         ]);
-//        DB::table('users')->where('id', Session::get('user_id'))
-//            ->update('email', $data['email'])
-//            ->update('password', Hash::make($data['password']))
-//            ->update('tel', $data['tel']);
-
     }
 
 
@@ -94,13 +96,12 @@ class RegisterController extends Controller
     {
         $this->validator($request->all())->validate();
 
-        event(new Registered($user = $this->update($request->all())));
+        event(new Registered($user = $this->create($request->all())));
 
         //$this->guard()->login($user);
 
         return $this->registered($request, $user)
             ?: redirect($this->redirectPath());
-
     }
 
 
