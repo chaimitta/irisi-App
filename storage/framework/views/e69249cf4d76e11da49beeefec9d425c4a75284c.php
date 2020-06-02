@@ -54,17 +54,17 @@
         <nav id="nav-menu-container">
             <ul class="nav-menu">
                 <?php if(auth()->guard()->guest()): ?>
-                     <li class="menu-active"><a href="<?php echo e(url('/')); ?>">Accueil</a></li>
-                     <li><a href="<?php echo e(route('login')); ?>">Connexion</a></li>
+                     <li id="accueil" class="menu-active"><a href="<?php echo e(url('/')); ?>">Accueil</a></li>
+                     <li id="connexion"><a href="<?php echo e(route('login')); ?>">Connexion</a></li>
 
 
 
 
 
-                        <li>
+                        <li id="inscription">
                         <a href="<?php echo e(url('/check')); ?>" >Inscription</a>
                         </li>
-                    <li><a href="<?php echo e(url('/contact')); ?>">Contact</a></li>
+                    <li id="contact"><a href="<?php echo e(url('/contact')); ?>">Contact</a></li>
                 <?php else: ?>
                     <li class="menu-active"><a href="<?php echo e(url('/dashboard')); ?>">Accueil</a></li>
                     <li class="menu-has-children"> <a href="#"><?php echo e(Auth::user()->nom); ?> <?php echo e(Auth::user()->prenom); ?></a><span class="caret"></span>

@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nom','prenom', 'email','login', 'password','tel','categorie','image',
+        'nom','prenom', 'email', 'password','tel','categorie','image',
     ];
 
     /**
@@ -48,6 +48,11 @@ class User extends Authenticatable
     }
     public function dashboard(){
         return $this->hasMany(Dashboard::class);
-
+    }
+    public function etudiant(){
+        return $this->hasOne(Etudiant::class);
+    }
+    public function professeur(){
+        return $this->hasOne(Professeur::class);
     }
 }

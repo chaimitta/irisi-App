@@ -15,12 +15,32 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:guithub-irisi-App" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="initial commit">
+    <list default="true" id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Etudiant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/Old_register.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Professeur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_01_224738_create_etudiants_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_01_230946_create_professeurs_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/check.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/check.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/0b849fa9fc74330caf2954e3808c64af1013d26b.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/0b849fa9fc74330caf2954e3808c64af1013d26b.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/e69249cf4d76e11da49beeefec9d425c4a75284c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/e69249cf4d76e11da49beeefec9d425c4a75284c.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-06-01.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-06-01.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,17 +166,18 @@
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\besto\PhpstormProjects\irisi-App\app\Http\Controllers\Auth" />
+      <recent name="C:\Users\Chaimaa\irisi-App\public\img" />
+      <recent name="C:\Users\Chaimaa\irisi-App\resources" />
+      <recent name="C:\Users\Chaimaa\irisi-App\resources\views\Dashboard" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Chaimaa\irisi-App\public\img" />
       <recent name="C:\Users\Chaimaa\irisi-App\public\js" />
       <recent name="C:\Users\Chaimaa\irisi-App\public\css" />
       <recent name="C:\Users\Chaimaa\irisi-App\public" />
       <recent name="C:\Users\Chaimaa\irisi-App\public\images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Chaimaa\irisi-App\public\img" />
-      <recent name="C:\Users\Chaimaa\irisi-App\resources" />
-      <recent name="C:\Users\Chaimaa\irisi-App\resources\views\Dashboard" />
     </key>
   </component>
   <component name="RunManager">
@@ -187,7 +208,7 @@
       <workItem from="1590863656430" duration="3869000" />
       <workItem from="1590961754426" duration="2288000" />
       <workItem from="1591003938966" duration="17512000" />
-      <workItem from="1591037059889" duration="8271000" />
+      <workItem from="1591037059889" duration="21992000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1591028638454</created>
@@ -203,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591039982458</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="another commit">
+      <created>1591045363067</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591045363067</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,30 +272,30 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="another commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="another commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="493" y="276" key="#Composer" timestamp="1591036851127">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="493" y="276" key="#Composer/0.0.1366.768@0.0.1366.768" timestamp="1591036851127" />
-    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1590349265838">
+    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1591058831381">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1590349265838" />
+    <state x="488" y="45" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1591058831381" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591043638260">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591043638260" />
-    <state x="327" y="89" width="749" height="475" key="CommitChangelistDialog2" timestamp="1591041356702">
+    <state x="327" y="89" width="749" height="475" key="CommitChangelistDialog2" timestamp="1591045361142">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="327" y="89" width="749" height="475" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1591041356702" />
+    <state x="327" y="89" width="749" height="475" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1591045361142" />
     <state x="255" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1591037590593" />
     <state x="76" y="58" key="DiffContextDialog" timestamp="1591037559322">
       <screen x="0" y="0" width="1366" height="768" />
@@ -285,30 +313,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="457" y="68" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591026608194" />
-    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1591042764486">
+    <state x="518" y="287" key="NewPhpFileDialog" timestamp="1591061055603">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1591042764486" />
-    <state x="502" y="40" key="RollbackChangesDialog" timestamp="1591049822602">
+    <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1591061055603" />
+    <state x="502" y="40" key="RollbackChangesDialog" timestamp="1591038856684">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="502" y="40" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591049822602" />
+    <state x="502" y="40" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591038856684" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1591027583481">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591027583481" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1591040019680">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1591045366061">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591040019680" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591045366061" />
     <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1591038122191" />
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1591041557146">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1591041557146" />
-    <state x="497" y="258" key="git4idea.ui.GitResetDialog" timestamp="1591049786354">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="497" y="258" key="git4idea.ui.GitResetDialog/0.0.1366.728@0.0.1366.728" timestamp="1591049786354" />
   </component>
 </project>

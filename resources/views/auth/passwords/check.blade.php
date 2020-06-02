@@ -10,6 +10,12 @@
 
                     <div class="card-body">
                         <form method="POST" class="needs-validation" action="{{ url('/check') }}" novalidate>
+                            @if(isset($message_error))
+                                <div class="alert alert-danger alert-dismissible fade show text-center">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>Erreur:</strong> {{$message_error}}
+                                </div>
+                            @endif
                             @csrf
                             <div class="form-group row">
                                 <label for="cne" class="col-md-4 col-form-label text-md-right">CNE</label>
@@ -60,4 +66,8 @@
             </div>
         </div>
     </div>
+    <script>
+        $('.menu-active').removeClass('menu-active');
+        $('#inscription').addClass('menu-active');
+    </script>
 @endsection

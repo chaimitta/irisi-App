@@ -4,37 +4,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" ><i>Inscription</i></div>
+                <div class="card-header" ><i>Maintenant veuillez créer votre compte</i><span class="float-right text-primary"><?php echo e(Session::get('nom')); ?></span></div>
 
                 <div class="card-body">
                     <form method="POST" class="needs-validation" action="<?php echo e(route('register')); ?>" novalidate>
                         <?php echo csrf_field(); ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-mail</label>
                             <div class="col-md-6">

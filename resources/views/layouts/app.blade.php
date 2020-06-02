@@ -54,17 +54,17 @@
         <nav id="nav-menu-container">
             <ul class="nav-menu">
                 @guest
-                     <li class="menu-active"><a href="{{ url('/') }}">Accueil</a></li>
-                     <li><a href="{{ route('login') }}">Connexion</a></li>
+                     <li id="accueil" class="menu-active"><a href="{{ url('/') }}">Accueil</a></li>
+                     <li id="connexion"><a href="{{ route('login') }}">Connexion</a></li>
 {{--                    @if (Route::has('register'))--}}
 {{--                        <li>--}}
 {{--                        <a href="{{ route('register') }}" >Inscription</a>--}}
 {{--                        </li>--}}
 {{--                    @endif--}}
-                        <li>
+                        <li id="inscription">
                         <a href="{{ url('/check') }}" >Inscription</a>
                         </li>
-                    <li><a href="{{ url('/contact') }}">Contact</a></li>
+                    <li id="contact"><a href="{{ url('/contact') }}">Contact</a></li>
                 @else
                     <li class="menu-active"><a href="{{ url('/dashboard') }}">Accueil</a></li>
                     <li class="menu-has-children"> <a href="#">{{ Auth::user()->nom }} {{ Auth::user()->prenom }}</a><span class="caret"></span>
