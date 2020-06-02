@@ -15,29 +15,12 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:guithub-irisi-App" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/check.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/irisi-App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/irisi-App.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/4EakNVDKK7jIvLsSrmJJnpCRusH7fWXHaqt9MX4E" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/RptLtGujAR6q7WXjDv1mzLDuw6sw6LtZ5gYDjmGk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/oWrStXQFKuKEUdI6D2ZrhX3ibY28wzzkPu27hQNn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/0b849fa9fc74330caf2954e3808c64af1013d26b.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/0b849fa9fc74330caf2954e3808c64af1013d26b.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/e69249cf4d76e11da49beeefec9d425c4a75284c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/e69249cf4d76e11da49beeefec9d425c4a75284c.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-06-01.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel-2020-06-01.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,6 +244,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -305,10 +289,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="518" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1591042764486" />
-    <state x="502" y="40" key="RollbackChangesDialog" timestamp="1591038856684">
+    <state x="502" y="40" key="RollbackChangesDialog" timestamp="1591049822602">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="502" y="40" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591038856684" />
+    <state x="502" y="40" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591049822602" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1591027583481">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -322,5 +306,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1591041557146" />
+    <state x="497" y="258" key="git4idea.ui.GitResetDialog" timestamp="1591049786354">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="497" y="258" key="git4idea.ui.GitResetDialog/0.0.1366.728@0.0.1366.728" timestamp="1591049786354" />
   </component>
 </project>
