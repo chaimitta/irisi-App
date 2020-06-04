@@ -9,15 +9,6 @@
 
     <title>IRISI-App</title>
 
-    <!-- Scripts -->
-    <script src="<?php echo e(asset('js/app.js')); ?>" defer></script>
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-   <!-- <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">-->
-
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -26,15 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
     <!-- Bootstrap css -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+
     <link href="<?php echo e(asset('lib/bootstrap/css/bootstrap.min.css')); ?>" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
-    <link href="<?php echo e(asset('lib/owlcarousel/assets/owl.carousel.min.css')); ?>" rel="stylesheet">
-    <link href="<?php echo e(asset('lib/owlcarousel/assets/owl.theme.default.min.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('lib/font-awesome/css/font-awesome.min.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('lib/animate/animate.min.css')); ?>" rel="stylesheet">
-    <link href="<?php echo e(asset('lib/modal-video/css/modal-video.min.css')); ?>" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
     <link href="<?php echo e(asset('css/style.css')); ?>" rel="stylesheet">
@@ -45,10 +33,12 @@
 <header id="header" class="header header-hide">
     <div class="container">
 
-        <div id="logo" class="pull-left">
-            <!--<h1><a href="#body" class="scrollto"><span>e</span>Startup</a></h1>-->
+        <div id="logo" class="pull-left" >
+            <h1><a href="#body" class="scrollto"><span>e</span>Startup</a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="<?php echo e(url('/')); ?>"><img class="w-25" src="<?php echo e(url('img/logo.png')); ?>" alt="IRISI-App" title="IRISI-App" /></a>
+
+
+
         </div>
 
         <nav id="nav-menu-container">
@@ -96,6 +86,13 @@
             <?php echo $__env->yieldContent('content'); ?>
        </main>
 </div>
+
+<!-- Template Main JS File -->
+<script src="<?php echo e(asset('js/main.js')); ?>"></script>
+<script src="<?php echo e(asset('lib/bootstrap/js/bootstrap.bundle.min.js')); ?>"></script>
+<script src="<?php echo e(asset('lib/jquery/jquery.min.js')); ?>"></script>
+<script src="<?php echo e(asset('lib/bootstrap/js/bootstrap.min.js')); ?>"></script>
+
 </body>
 
 </html>

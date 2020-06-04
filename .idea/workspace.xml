@@ -20,34 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/app/Annee_univ.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Examen.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Module.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Niveau.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Note.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Semestre.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_172439_create_annee_univs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_172950_create_semestres_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173035_create_modules_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173053_create_niveaux_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173109_create_examens_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173123_create_notes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/admin.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/image-not-found.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Enseigne.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Liste_etudiant.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_03_221005_create_liste_etudiants_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_03_221757_create_enseignes_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/dashboard_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/dashboardApp.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Etudiant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Etudiant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Niveau.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Niveau.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Professeur.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Professeur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Dashboard/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Dashboard/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Semestre.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Semestre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_02_173035_create_modules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173035_create_modules_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/lib/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/lib/bootstrap/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Dashboard/etudiant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Dashboard/etudiant.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Dashboard/professeur.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Dashboard/professeur.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/23poygNKW7siJ28Aba6HkVjWMs0E9C9x3cyocwML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/eXGhhOx5T6pD2GR8s7EcCiTaHj7NtpXOSZaUrsvk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/27bb1a5a6e7ff1e83102f3d10716c98be7b07d56.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/27bb1a5a6e7ff1e83102f3d10716c98be7b07d56.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/6f1a512614b13098e4dda2041affd731c0bdcf4a.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6f1a512614b13098e4dda2041affd731c0bdcf4a.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/83096272bc7d81b8992ee381439998597c3c4049.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/83096272bc7d81b8992ee381439998597c3c4049.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/8c525a74bd5f9c9a7a8b2618b4b73620e589f455.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/8c525a74bd5f9c9a7a8b2618b4b73620e589f455.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/1d08e49d2226b812b059abc0dcf057ac71b1b90c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1d08e49d2226b812b059abc0dcf057ac71b1b90c.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/3d3fd1320051adafe69483d5d687feb531040724.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/3d3fd1320051adafe69483d5d687feb531040724.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/d816da9ec91376e7628c8f00ff2538ba058a6904.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/d816da9ec91376e7628c8f00ff2538ba058a6904.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/e69249cf4d76e11da49beeefec9d425c4a75284c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/e69249cf4d76e11da49beeefec9d425c4a75284c.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,23 +162,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/lib/bootstrap/css" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\besto\PhpstormProjects\irisi-App\public\lib\bootstrap\css" />
+      <recent name="C:\Users\besto\PhpstormProjects\irisi-App\public\css" />
+      <recent name="C:\Users\besto\PhpstormProjects\irisi-App\resources\views\layouts" />
+      <recent name="C:\Users\Chaimaa\irisi-App\public\img" />
+      <recent name="C:\Users\Chaimaa\irisi-App\public\js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\besto\PhpstormProjects\irisi-App\app\Http\Controllers\Auth" />
       <recent name="C:\Users\Chaimaa\irisi-App\public\img" />
       <recent name="C:\Users\Chaimaa\irisi-App\resources" />
       <recent name="C:\Users\Chaimaa\irisi-App\resources\views\Dashboard" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Chaimaa\irisi-App\public\img" />
-      <recent name="C:\Users\Chaimaa\irisi-App\public\js" />
-      <recent name="C:\Users\Chaimaa\irisi-App\public\css" />
-      <recent name="C:\Users\Chaimaa\irisi-App\public" />
-      <recent name="C:\Users\Chaimaa\irisi-App\public\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -344,5 +338,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1591041557146" />
+    <state x="378" y="152" key="git4idea.merge.GitPullDialog" timestamp="1591212276761">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1591212276761" />
   </component>
 </project>

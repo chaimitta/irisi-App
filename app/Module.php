@@ -10,7 +10,7 @@ class Module extends Model
         return $this->belongsTo(Semestre::class);
     }
 
-    public function professeur(){
-        return $this->belongsTo(Professeur::class);
+    public function enseigne(){
+        return $this->hasMany(Enseigne::class);
     }
 }

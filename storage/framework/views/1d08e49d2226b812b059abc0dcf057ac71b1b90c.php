@@ -5,9 +5,10 @@
             <h1>Bienvenue sur IRISI-App</h1>
             <h2>Une application destinée aux élèves ingénieurs en Réseaux et Systèmes d'Information</h2>
             <img src="img/hero-img.png" alt="Hero Imgs">
-            <a href="<?php echo e(route('register')); ?>" class="btn-get-started scrollto">Commencer</a>
+            <a href="<?php echo e(url('/check')); ?>" class="btn-get-started scrollto">Commencer</a>
         </div>
     </section>
+    <br><br>
     <footer >
         <div class="container-fluid">
             <div class="row">

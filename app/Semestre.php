@@ -10,7 +10,11 @@ class Semestre extends Model
         return $this->belongsTo(Annee_univ::class);
     }
 
-    public function module(){
-        return $this->hasMany(Module::class);
+    public function liste_etudiant(){
+        return $this->hasMany(Liste_etudiant::class);
+    }
+
+    public function enseigne(){
+        return $this->hasMany(Enseigne::class);
     }
 }

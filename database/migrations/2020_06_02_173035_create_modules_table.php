@@ -16,11 +16,8 @@ class CreateModulesTable extends Migration
         Schema::create('modules', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('libelle')->unique();
-            $table->unsignedBigInteger('semestre_id');
-            $table->unsignedBigInteger('professeur_id');
+
             $table->timestamps();
-            $table->index('semestre_id');
-            $table->index('professeur_id');
         });
     }
 

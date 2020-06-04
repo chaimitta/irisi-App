@@ -10,7 +10,7 @@ class Professeur extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function module(){
-        return $this->hasMany(Module::class);
+    public function enseigne(){
+        return $this->hasMany(Enseigne::class);
     }
 }
