@@ -19,35 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/app/Annee_univ.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Examen.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Module.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Niveau.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Note.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Semestre.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_172439_create_annee_univs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_172950_create_semestres_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173035_create_modules_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173053_create_niveaux_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173109_create_examens_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173123_create_notes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/admin.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/image-not-found.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/script.js" afterDir="false" />
+    <list default="true" id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="adding dashboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Professeur.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Professeur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Dashboard/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Dashboard/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Dashboard/etudiant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Dashboard/etudiant.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Dashboard/professeur.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Dashboard/professeur.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/23poygNKW7siJ28Aba6HkVjWMs0E9C9x3cyocwML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/eXGhhOx5T6pD2GR8s7EcCiTaHj7NtpXOSZaUrsvk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/27bb1a5a6e7ff1e83102f3d10716c98be7b07d56.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/27bb1a5a6e7ff1e83102f3d10716c98be7b07d56.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/6f1a512614b13098e4dda2041affd731c0bdcf4a.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6f1a512614b13098e4dda2041affd731c0bdcf4a.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/83096272bc7d81b8992ee381439998597c3c4049.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/83096272bc7d81b8992ee381439998597c3c4049.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/8c525a74bd5f9c9a7a8b2618b4b73620e589f455.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/8c525a74bd5f9c9a7a8b2618b4b73620e589f455.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +190,8 @@
       <workItem from="1591003938966" duration="17512000" />
       <workItem from="1591037059889" duration="21992000" />
       <workItem from="1591116662396" duration="8920000" />
-      <workItem from="1591132406094" duration="4816000" />
+      <workItem from="1591132406094" duration="5168000" />
+      <workItem from="1591212388495" duration="2368000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1591028638454</created>
@@ -240,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591045363067</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adding dashboard">
+      <created>1591137790743</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591137790763</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +268,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="another commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="another commit" />
+    <MESSAGE value="adding dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding dashboard" />
   </component>
   <component name="WindowStateProjectService">
     <state x="493" y="276" key="#Composer" timestamp="1591036851127">
@@ -315,6 +297,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="561" y="254" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1591027767094" />
+    <state x="543" y="275" key="Github.Dialog.Accounts.Choose" timestamp="1591137909016">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="543" y="275" key="Github.Dialog.Accounts.Choose/0.0.1366.728@0.0.1366.728" timestamp="1591137909016" />
     <state x="561" y="261" key="Github.ShareDialog" timestamp="1591031654372">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -335,10 +321,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591027583481" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1591045366061">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1591137822240">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591045366061" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591137822240" />
     <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1591038122191" />
     <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1591041557146">
       <screen x="0" y="0" width="1366" height="728" />
