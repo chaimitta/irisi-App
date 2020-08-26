@@ -35,37 +35,86 @@ class ProfileController extends Controller
         $confirmpass = $request->confirmpass;
       
 
-        $password = DB::table('users')->select('password')->where('id', $user->id)->get();
+        if ($request->pass != null) {
 
-        $oldpass = $password->get(0)->password;
-        
-        if(!Hash::check($pass, $oldpass)){
-            $message = "Ancien mot de passe invalid";
-            return view('Dashboard/professeur/profile',compact('message'),compact('user'));
-        }else{
+            $password = DB::table('users')->where('id','=',$user->id)
+            ->select('password')->get()->get(0)->password;
 
-            if($newpass != $confirmpass){
-                $message2 = "Informations  invalides,Une erreur s'est produite. Veuillez réessayez";
-                return view('Dashboard/professeur/profile',compact('message2'),compact('user'));
+            if(!Hash::check($request->pass, $password)){
+                $passwordincorrect = "l'ancien mot de passe donné est incorrect!";
+                return redirect('/register/edit')->with('passwordincorrect',$passwordincorrect);
+            }
+
+            if ($request->newpass != null) {
+                if($request->confirmpass != null){
+
+                    if($request->newpass != $request->confirmpass){
+                        $passnotnewpass = "le nouveau mot de passe n'a été pas bien confirmé!";
+                        return redirect('/register/edit')->with('passnotnewpass',$passnotnewpass);
+                    }
+
+                    else{
+
+                        
+                            DB::table('users')
+                            ->where('id','=',$user->id)
+                            ->update([
+                                'email' => $request->email,
+                                'password' => Hash::make($request->newpass),
+                            ]);
+                        
+
+                        if ($request->hasFile('img')) {
+                
+                                        $request->validate([
+                                          'img' => 'file|image|max:5000',
+                                        ]);
+                                         $user->update([
+                                             'image'=> $request->img->store('uploads','public'),
+                                        ]);
+                         }
+                        $passwordset = "votre compte a été bien modifié!";
+                        return redirect('/register/edit')->with('passwordset',$passwordset);
+
+                    }
+                }
+
+                else{
+                   
+                    $passwordconfirmed = "vous devez confirmer le nouveau mot de passe!";
+                    return redirect('/register/edit')->with('passwordconfirmed',$passwordconfirmed);
+                    
+                }
+
             }
             else{
-                if ($request->hasFile('img')) {
-                
-                    $request->validate([
-                        'img' => 'file|image|max:5000',
-                    ]);
-                    $user->update([
-                        'image'=> $request->img->store('uploads','public'),
-                    ]);
-                }
- 
-                Session::put('email', $email);
-                Session::put('password', $newpass);
-        
-                return redirect('/register/edit');
-       
+
+                $passwordlost = "vous n'avez donné aucun nouveau mot de passe!";
+                return redirect('/register/edit')->with('passwordlost',$passwordlost);
             }
         }
+        else{
+            
+                DB::table('users')
+                ->where('id','=',$user->id)
+                ->update([
+                    'email' => $request->email,
+                ]);
+           
+            if ($request->hasFile('img')) {
+                
+                $request->validate([
+                  'img' => 'file|image|max:5000',
+                ]);
+                 $user->update([
+                     'image'=> $request->img->store('uploads','public'),
+                ]);
+ }
+
+            $passwordset = "votre compte a été bien edité!";
+            return redirect('/register/edit')->with('passwordset',$passwordset);
+        }
+    
     
     }
 
@@ -76,37 +125,84 @@ class ProfileController extends Controller
         $newpass = $request->newpass;
         $confirmpass = $request->confirmpass;
       
+        if ($request->pass != null) {
 
-        $password = DB::table('users')->select('password')->where('id', $user->id)->get();
+            $password = DB::table('users')->where('id','=',$user->id)
+            ->select('password')->get()->get(0)->password;
 
-        $oldpass = $password->get(0)->password;
-        
-        if(!Hash::check($pass, $oldpass)){
-            $message = "Ancien mot de passe invalid";
-            return view('Dashboard/etudiant/profile',compact('message'),compact('user'));
-        }else{
+            if(!Hash::check($request->pass, $password)){
+                $passwordincorrect = "l'ancien mot de passe donné est incorrect!";
+                return redirect('/register/editEtudiant')->with('passwordincorrect',$passwordincorrect);
+            }
 
-            if($newpass != $confirmpass){
-                $message2 = "Informations  invalides,Une erreur s'est produite. Veuillez réessayez";
-                return view('Dashboard/etudiant/profile',compact('message2'),compact('user'));
+            if ($request->newpass != null) {
+                if($request->confirmpass != null){
+
+                    if($request->newpass != $request->confirmpass){
+                        $passnotnewpass = "le nouveau mot de passe n'a été pas bien confirmé!";
+                        return redirect('/register/editEtudiant')->with('passnotnewpass',$passnotnewpass);
+                    }
+
+                    else{
+
+                       
+                            DB::table('users')
+                            ->where('id','=',$user->id)
+                            ->update([
+                                'email' => $request->email,
+                                'password' => Hash::make($request->newpass),
+                            ]);
+                       
+                        if ($request->hasFile('img')) {
+                
+                                        $request->validate([
+                                          'img' => 'file|image|max:5000',
+                                        ]);
+                                         $user->update([
+                                             'image'=> $request->img->store('uploads','public'),
+                                        ]);
+                         }
+                        $passwordset = "votre compte a été bien modifié!";
+                        return redirect('/register/editEtudiant')->with('passwordset',$passwordset);
+
+                    }
+                }
+
+                else{
+                   
+                    $passwordconfirmed = "vous devez confirmer le nouveau mot de passe!";
+                    return redirect('/register/editEtudiant')->with('passwordconfirmed',$passwordconfirmed);
+                    
+                }
+
             }
             else{
-                if ($request->hasFile('img')) {
-                
-                    $request->validate([
-                        'img' => 'file|image|max:5000',
-                    ]);
-                    $user->update([
-                        'image'=> $request->img->store('uploads','public'),
-                    ]);
-                }
- 
-                Session::put('email', $email);
-                Session::put('password', $newpass);
-        
-                return redirect('/register/editEtudiant');
-       
+
+                $passwordlost = "vous n'avez donné aucun nouveau mot de passe!";
+                return redirect('/register/editEtudiant')->with('passwordlost',$passwordlost);
             }
+        }
+        else{
+           
+                DB::table('users')
+                ->where('id','=',$user->id)
+                ->update([
+                    'email' => $request->email,
+                ]);
+           
+
+            if ($request->hasFile('img')) {
+                
+                $request->validate([
+                  'img' => 'file|image|max:5000',
+                ]);
+                 $user->update([
+                     'image'=> $request->img->store('uploads','public'),
+                ]);
+ }
+
+            $passwordset = "votre compte a été bien edité!";
+            return redirect('/register/editEtudiant')->with('passwordset',$passwordset);
         }
     
     }
@@ -115,11 +211,7 @@ class ProfileController extends Controller
 
     public function update(){
         $util= Auth::user();
-        $count =  DB::table('users')->where('id', $util->id)
-            ->update([
-            'email' => Session::get('email'),
-            'password' => Hash::make(Session::get('password')),
-        ]);
+       
         $user2 = DB::table('users')->select('id', 'nom','prenom','tel','password','email','categorie','image')->where('id', $util->id)->get();
        $user = $user2->get(0);
         return view('Dashboard/professeur/profile',compact('user'));
@@ -127,11 +219,7 @@ class ProfileController extends Controller
 
     public function update2(){
         $util= Auth::user();
-        $count =  DB::table('users')->where('id', $util->id)
-            ->update([
-            'email' => Session::get('email'),
-            'password' => Hash::make(Session::get('password')),
-        ]);
+       
         $user2 = DB::table('users')->select('id', 'nom','prenom','tel','password','email','categorie','image')->where('id', $util->id)->get();
        $user = $user2->get(0);
         return view('Dashboard/etudiant/profile',compact('user'));
