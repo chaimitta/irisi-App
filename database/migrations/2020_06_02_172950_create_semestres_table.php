@@ -18,6 +18,8 @@ class CreateSemestresTable extends Migration
             $table->string('int_semestre');
             $table->unsignedBigInteger('annee_univ_id');
             $table->timestamps();
+
+            $table->foreign('annee_univ_id')->references('id')->on('annee_univs');
             $table->index('annee_univ_id');
         });
     }

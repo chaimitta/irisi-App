@@ -16,6 +16,7 @@ class CreateAnneeUnivsTable extends Migration
         Schema::create('annee_univs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('int_annee')->unique();
+            $table->string('current')->default('0');
             $table->timestamps();
         });
     }

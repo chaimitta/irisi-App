@@ -13,4 +13,8 @@ class Niveau extends Model
     public function enseigne(){
         return $this->hasMany(Enseigne::class);
     }
+
+    // public function module(){
+    //     return $this->hasMany(Module::class);
+    // }
 }

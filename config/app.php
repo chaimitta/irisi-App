@@ -66,6 +66,8 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
+     
+    
 
     'timezone' => 'UTC',
 
@@ -161,7 +163,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Barryvdh\DomPDF\ServiceProvider::class,
         /*
          * Package Service Providers...
          */

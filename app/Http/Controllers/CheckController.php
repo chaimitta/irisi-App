@@ -30,28 +30,32 @@ class CheckController extends Controller
              return view('auth/passwords/check',compact('message_error'));
          }
          else{
-             $user = DB::table('etudiants')->select('user_id')->where(function ($query) use ($dateBirth, $code, $cne) {
+             $user = DB::table('etudiants')->select('user_id','deleted')->where(function ($query) use ($dateBirth, $code, $cne) {
                  $query->where('cne', $cne)
                      ->where('code_apogee', $code)
                      ->where('date_naissance', $dateBirth);
              })->get();
 
-//             dd($user);
-
              if($user->get(0)->user_id <= 0){
-                 $message_error = "Informations de connexion invalidesUne erreur s'est produite. Veuillez réessayez";
+                 $message_error = "Informations de connexion invalides,Une erreur s'est produite. Veuillez réessayez";
                  return view('auth/passwords/check',compact('message_error'));
              }
              else{
-//                 return view('auth/register',compact('id'));
-                 $id = $user->get(0)->user_id;
+                 if($user->get(0)->deleted !=0){
+                    $message_error2 = "Votre compte a été supprimé. Veuillez contacter l'administrateur!";
+                    return view('auth/passwords/check',compact('message_error2'));
+                 }else{
 
-                 $user = DB::table('users')->select('nom', 'prenom')->where('id', $id)->get();
-                 $nom = $user->get(0)->nom . ' ' . $user->get(0)->prenom;
+                     $id = $user->get(0)->user_id;
+    
+                     $user = DB::table('users')->select('nom', 'prenom')->where('id', $id)->get();
+                     $nom = $user->get(0)->nom . ' ' . $user->get(0)->prenom;
+    
+                     Session::put('user_id', $id);
+                     Session::put('nom', $nom);
+                     return redirect('/register');
+                 }
 
-                 Session::put('user_id', $id);
-                 Session::put('nom', $nom);
-                 return redirect('/register');
              }
          }
     }

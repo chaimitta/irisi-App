@@ -1,6 +1,9 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+
+ body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #eee;
+  background-color:white;
 }
 
 /* navbar */
@@ -39,7 +42,7 @@ body {
   box-shadow: 2px 5px 20px #111;
   transform: translateY(-1px);
 }
-
+ 
 .search-input {
   background: transparent;
   border: none;
@@ -79,33 +82,101 @@ body {
   background-color: #FFC557;
   border-radius: 50%;
 }
-
+  
 @media (max-width: 768px) {
   .sidebar {
     position: static;
     height: auto;
   }
-
+   
   .top-navbar {
     position: static;
   }
 }
 /* end of navbar */
+ 
 
+ 
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding-left: 300px;
+     
+    padding-right: 20px;
+   font-size: medium;
+    display:block;
+  }
+  
+  .content-table thead tr {
+    background-color: #088A08;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #088A08;;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #37C42B;;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .table,.table-striped,.table-hover,.table{
+    
+     left:250px;
+     width:80%;
+    
+    }
+     
+    .first-letter{
+      color:#37C42B;
+    }
+    .table,.table-striped,.table-hover,.table,th,tr,.titre{
+      text-align: center;
+    padding-right: 0px;
+     
+    }
+    
+    .container{
+      overflow-x:auto;
+    }
+     .text{
+      padding-top:80px;
+      padding-left: 300px;
+      font-family: 'Montaga', serif;
+      color:#088A08;
+    
+    }
+    
+    td{
+      padding-top: 12px;
+      padding-bottom: 12px;;
+      height: auto;
+      width: 2000px;
+    }
+    
+    .titre{
+        font-size: large;
+      }      .fa,.fa-bullhorn,.fa,.fa-question-circle{
+        color: #FFC557;
+     }

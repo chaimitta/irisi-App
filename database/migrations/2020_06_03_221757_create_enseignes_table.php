@@ -21,6 +21,10 @@ class CreateEnseignesTable extends Migration
             $table->unsignedBigInteger('niveau_id');
             $table->timestamps();
 
+            $table->foreign('professeur_id')->references('id')->on('professeurs');
+            $table->foreign('semestre_id')->references('id')->on('semestres');
+            $table->foreign('module_id')->references('id')->on('modules');
+            $table->foreign('niveau_id')->references('id')->on('niveaux');
             $table->index('professeur_id');
             $table->index('semestre_id');
             $table->index('module_id');

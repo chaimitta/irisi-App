@@ -16,6 +16,12 @@
                                     <strong>Erreur:</strong> {{$message_error}}
                                 </div>
                             @endif
+                            @if(isset($message_error2))
+                                <div class="alert alert-danger alert-dismissible fade show text-center">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>Erreur:</strong> {{$message_error2}}
+                                </div>
+                            @endif
                             @csrf
                             <div class="form-group row">
                                 <label for="cne" class="col-md-4 col-form-label text-md-right">CNE</label>

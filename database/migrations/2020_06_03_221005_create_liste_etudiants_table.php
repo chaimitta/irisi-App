@@ -20,6 +20,9 @@ class CreateListeEtudiantsTable extends Migration
             $table->unsignedBigInteger('etudiant_id');
             $table->timestamps();
 
+            $table->foreign('niveau_id')->references('id')->on('niveaux');
+            $table->foreign('semestre_id')->references('id')->on('semestres');
+            $table->foreign('etudiant_id')->references('id')->on('etudiants');
             $table->index('niveau_id');
             $table->index('semestre_id');
             $table->index('etudiant_id');

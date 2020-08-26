@@ -28,14 +28,13 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
-<body>
+<body >
 <div id="app">
 <header id="header" class="header header-hide">
     <div class="container">
 
         <div id="logo" class="pull-left" >
-            <!--<h1><a href="#body" class="scrollto"><span>e</span>Startup</a></h1>-->
-            <!-- Uncomment below if you prefer to use an image logo -->
+            
             <a href="{{ url('/') }}">
                 <img class="w-25" src="{{ url('img/logo.png') }}" alt="IRISI-App" title="IRISI-App" />
             </a>
@@ -54,16 +53,12 @@
                         <li id="inscription">
                         <a href="{{ url('/check') }}" >Inscription</a>
                         </li>
-                    <li id="contact"><a href="{{ url('/contact') }}">Contact</a></li>
+                   
                 @else
                     <li class="menu-active"><a href="{{ url('/dashboard') }}">Accueil</a></li>
                     <li class="menu-has-children"> <a href="#">{{ Auth::user()->nom }} {{ Auth::user()->prenom }}</a><span class="caret"></span>
                     <ul>
-                       <!-- <li><a href="{{ url('/tableau') }}">Tableau de bord</a></li>
-                        <li><a href="{{ url('/profil') }}">Profil</a></li>
-                        <li><a href="{{ url('/notes') }}">Notes</a></li>
-                        <li><a href="{{ url('/preferences') }}">Préférences</a></li>
-                        <li><a href="{{ url('/messages') }}">Messages personnels</a></li>-->
+                       
                         <li>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();

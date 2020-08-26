@@ -8,7 +8,7 @@
                     <div class="card card-login">
                         <div class="card-header ">
                             <div class="card-header ">
-                                <h3 class="header text-center" style="color: orange"><?php echo e(__('Login')); ?></h3>
+                                <h3 class="header text-center" style="color: orange">Connectez vous</h3>
                             </div>
                         </div>
                         <div class="card-body ">
@@ -34,7 +34,7 @@
                                         <i class="nc-icon nc-single-02"></i>
                                     </span>
                                 </div>
-                                <input class="form-control<?php echo e($errors->has('password') ? ' is-invalid' : ''); ?>" name="password" placeholder="<?php echo e(__('mot de passe')); ?>" type="password" required>
+                                <input class="form-control<?php echo e($errors->has('password') ? ' is-invalid' : ''); ?>" name="password" placeholder="<?php echo e(__('Mot de passe')); ?>" type="password" required>
 
                                 <?php if($errors->has('password')): ?>
                                     <span class="invalid-feedback" style="display: block;" role="alert">
@@ -56,17 +56,14 @@
                         </div>
 
                         <div class="card-footer">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-warning btn-round mb-3"><?php echo e(__('Connexion')); ?></button>
-
-                            </div>
-                            <?php if(Route::has('password.request')): ?>
+                                <button type="submit" class="btn btn-success btn-block btn"><?php echo e(__('Connexion')); ?></button>
+                        </div>
+                    </div>
+                    <br><?php if(Route::has('password.request')): ?>
                                 <a  href="<?php echo e(route('password.request')); ?>" style="color: green">
                                     Mot de passe oublié ?
                                 </a>
                             <?php endif; ?>
-                        </div>
-                    </div>
                 </form>
             </div>
         </div>

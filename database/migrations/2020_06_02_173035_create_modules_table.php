@@ -16,8 +16,12 @@ class CreateModulesTable extends Migration
         Schema::create('modules', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('libelle')->unique();
-
+            // $table->unsignedBigInteger('niveau_id');
             $table->timestamps();
+
+           
+            // $table->foreign('niveau_id')->references('id')->on('niveaux');
+            // $table->index('niveau_id');
         });
     }
 

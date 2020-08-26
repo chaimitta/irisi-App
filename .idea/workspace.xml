@@ -19,29 +19,44 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/app/Enseigne.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Liste_etudiant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_03_221005_create_liste_etudiants_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_03_221757_create_enseignes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/dashboard_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/dashboardApp.blade.php" afterDir="false" />
+    <list default="true" id="2ec00f47-e237-491c-bf2b-32c987fac233" name="Default Changelist" comment="cmomit2">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Etudiant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Etudiant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Module.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Niveau.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Niveau.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Professeur.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Professeur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Semestre.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Semestre.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_02_173035_create_modules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173035_create_modules_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/lib/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Dashboard/etudiant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Dashboard/etudiant.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/cache/packages.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/packages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/cache/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_23_233458_create_dashboards_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_23_233458_create_dashboards_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_01_224738_create_etudiants_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_01_224738_create_etudiants_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_01_230946_create_professeurs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_01_230946_create_professeurs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_02_172950_create_semestres_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_172950_create_semestres_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_02_173123_create_notes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_173123_create_notes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_03_221005_create_liste_etudiants_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_03_221005_create_liste_etudiants_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_03_221757_create_enseignes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_03_221757_create_enseignes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/dashboard_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dashboard_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Dashboard/admin.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Dashboard/etudiant.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Dashboard/professeur.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/1d08e49d2226b812b059abc0dcf057ac71b1b90c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1d08e49d2226b812b059abc0dcf057ac71b1b90c.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/3d3fd1320051adafe69483d5d687feb531040724.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/3d3fd1320051adafe69483d5d687feb531040724.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/d816da9ec91376e7628c8f00ff2538ba058a6904.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/d816da9ec91376e7628c8f00ff2538ba058a6904.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/e69249cf4d76e11da49beeefec9d425c4a75284c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/e69249cf4d76e11da49beeefec9d425c4a75284c.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboardApp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboardApp.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/3d865ffe117e28f9214c005460887da4e46dc795.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/3d865ffe117e28f9214c005460887da4e46dc795.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/83096272bc7d81b8992ee381439998597c3c4049.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/83096272bc7d81b8992ee381439998597c3c4049.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/8c525a74bd5f9c9a7a8b2618b4b73620e589f455.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/8c525a74bd5f9c9a7a8b2618b4b73620e589f455.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel-2020-05-23.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +177,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/lib/bootstrap/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
@@ -212,6 +227,8 @@
       <workItem from="1591037059889" duration="21992000" />
       <workItem from="1591116662396" duration="8920000" />
       <workItem from="1591132406094" duration="4816000" />
+      <workItem from="1591265361557" duration="1354000" />
+      <workItem from="1592185441190" duration="639000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1591028638454</created>

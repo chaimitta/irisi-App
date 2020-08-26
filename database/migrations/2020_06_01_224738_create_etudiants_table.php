@@ -20,7 +20,10 @@ class CreateEtudiantsTable extends Migration
             $table->string('code_apogee')->unique();
             $table->date('date_naissance');
             $table->string('adresse');
+            $table->string('deleted')->default('0');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
             $table->index('user_id');
         });
     }

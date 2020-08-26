@@ -16,7 +16,10 @@ class CreateProfesseursTable extends Migration
         Schema::create('professeurs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->unique();
+            $table->string('deleted')->default('0');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
             $table->index('user_id');
         });
     }
