@@ -148,53 +148,163 @@ class ProfileController extends Controller
         $confirmpass = $request->confirmpass;
         
 
-        $password = DB::table('users')->select('password')->where('id', $user->id)->get();
+        // $password = DB::table('users')->select('password')->where('id', $user->id)->get();
 
-        $oldpass = $password->get(0)->password;
+        // $oldpass = $password->get(0)->password;
         
-        if(!Hash::check($pass, $oldpass)){
-            $message = "Ancien mot de passe invalid";
-            return view('Dashboard/admin/profile',compact('message'),compact('user'));
-        }else{
+        // if(!Hash::check($pass, $oldpass)){
+        //     $message = "Ancien mot de passe invalid";
+        //     return view('Dashboard/admin/profile',compact('message'),compact('user'));
+        // }else{
 
-            if($newpass != $confirmpass){
-                $message2 = "Informations  invalides,Une erreur s'est produite. Veuillez réessayez";
-                return view('Dashboard/admin/profile',compact('message2'),compact('user'));
+        //     if($newpass != $confirmpass){
+        //         $message2 = "Informations  invalides,Une erreur s'est produite. Veuillez réessayez";
+        //         return view('Dashboard/admin/profile',compact('message2'),compact('user'));
+        //     }
+        //     else{
+        //         if ($request->hasFile('img')) {
+                
+        //             $request->validate([
+        //                 'img' => 'file|image|max:5000',
+        //             ]);
+        //             $user->update([
+        //                 'image'=> $request->img->store('uploads','public'),
+        //             ]);
+        //         }
+ 
+        //         Session::put('email', $email);
+        //         Session::put('password', $newpass);
+        //         Session::put('nom', $nom);
+        //         Session::put('prenom', $prenom);
+        //         Session::put('tel', $tel);
+        
+        //         return redirect('/register/editAdmin');
+       
+        //     }
+        // }
+
+
+
+        if ($request->pass != null) {
+
+            $password = DB::table('users')->where('id','=',$user->id)
+            ->select('password')->get()->get(0)->password;
+
+            if(!Hash::check($request->pass, $password)){
+                $passwordincorrect = "l'ancien mot de passe donné est incorrect!";
+                return redirect('/register/editAdmin')->with('passwordincorrect',$passwordincorrect);
+            }
+
+            if ($request->newpass != null) {
+                if($request->confirmpass != null){
+
+                    if($request->newpass != $request->confirmpass){
+                        $passnotnewpass = "le nouveau mot de passe n'a été pas bien confirmé!";
+                        return redirect('/register/editAdmin')->with('passnotnewpass',$passnotnewpass);
+                    }
+
+                    else{
+
+                        if($request->tel != null){
+
+                            DB::table('users')
+                            ->where('id','=',$user->id)
+                            ->update([
+                                'nom' => $request->nom,
+                                'prenom' => $request->prenom,
+                                'email' => $request->email,
+                                'tel' => $request->tel,
+                                'password' => Hash::make($request->newpass),
+                            ]);
+                        }
+                        else{
+                            DB::table('users')
+                            ->where('id','=',$user->id)
+                            ->update([
+                                'nom' => $request->nom,
+                                'prenom' => $request->prenom,
+                                'email' => $request->email,
+                                'password' => Hash::make($request->newpass),
+                            ]);
+                        }
+
+                        if ($request->hasFile('img')) {
+                
+                                        $request->validate([
+                                          'img' => 'file|image|max:5000',
+                                        ]);
+                                         $user->update([
+                                             'image'=> $request->img->store('uploads','public'),
+                                        ]);
+                         }
+                        $passwordset = "votre compte a été bien modifié!";
+                        return redirect('/register/editAdmin')->with('passwordset',$passwordset);
+
+                    }
+                }
+
+                else{
+                   
+                    $passwordconfirmed = "vous devez confirmer le nouveau mot de passe!";
+                    return redirect('/register/editAdmin')->with('passwordconfirmed',$passwordconfirmed);
+                    
+                }
+
             }
             else{
-                if ($request->hasFile('img')) {
-                
-                    $request->validate([
-                        'img' => 'file|image|max:5000',
-                    ]);
-                    $user->update([
-                        'image'=> $request->img->store('uploads','public'),
-                    ]);
-                }
- 
-                Session::put('email', $email);
-                Session::put('password', $newpass);
-                Session::put('nom', $nom);
-                Session::put('prenom', $prenom);
-                Session::put('tel', $tel);
-        
-                return redirect('/register/editAdmin');
-       
+
+                $passwordlost = "vous n'avez donné aucun nouveau mot de passe!";
+                return redirect('/register/editAdmin')->with('passwordlost',$passwordlost);
             }
+        }
+        else{
+            if($request->tel != null){
+                DB::table('users')
+                ->where('id','=',$user->id)
+                ->update([
+                    'nom' => $request->nom,
+                    'prenom' => $request->prenom,
+                    'email' => $request->email,
+                    'tel' => $request->tel,
+                ]);
+            }
+            else{
+
+                DB::table('users')
+                ->where('id','=',$user->id)
+                ->update([
+                    'nom' => $request->nom,
+                    'prenom' => $request->prenom,
+                    'email' => $request->email,
+                ]);
+            }
+
+            if ($request->hasFile('img')) {
+                
+                $request->validate([
+                  'img' => 'file|image|max:5000',
+                ]);
+                 $user->update([
+                     'image'=> $request->img->store('uploads','public'),
+                ]);
+ }
+
+            $passwordset = "votre compte a été bien edité!";
+            return redirect('/register/editAdmin')->with('passwordset',$passwordset);
         }
     
     }
 
     public function updateAdmin(){
         $util= Auth::user();
-        $count =  DB::table('users')->where('id', $util->id)
-            ->update([
-            'email' => Session::get('email'),
-            'password' => Hash::make(Session::get('password')),
-            'nom' => Session::get('nom'),
-            'prenom' => Session::get('prenom'),
-            'tel' => Session::get('tel'),
-        ]);
+        // $count =  DB::table('users')->where('id', $util->id)
+        //     ->update([
+        //     'email' => Session::get('email'),
+        //     'password' => Hash::make(Session::get('password')),
+        //     'nom' => Session::get('nom'),
+        //     'prenom' => Session::get('prenom'),
+        //     'tel' => Session::get('tel'),
+        // ]);
         $user2 = DB::table('users')->select('id', 'nom','prenom','tel','password','email','categorie','image')->where('id', $util->id)->get();
         $user = $user2->get(0);
         return view('Dashboard/admin/profile',compact('user'));

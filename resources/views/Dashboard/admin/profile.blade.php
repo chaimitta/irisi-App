@@ -154,20 +154,38 @@
                 </div>
                 <div class="card-body">
                   <form method="post" action="/dashboard/editProfilAdmin" enctype="multipart/form-data">
-                  @if(isset($message))
-                                <div class="alert alert-danger alert-dismissible fade show text-center">
-                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                    <strong>Erreur:</strong> {{$message}}
-                                </div>
-                            @endif
                   @csrf
-                  @if(isset($message2))
-                                <div class="alert alert-danger alert-dismissible fade show text-center">
-                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                    <strong>Erreur:</strong> {{$message2}}
-                                </div>
-                            @endif
-                          
+                  @if (session('passwordincorrect'))
+                           <div class="alert alert-danger">
+								 <button type="button" class="close" data-dismiss="alert">×</button>
+							    <strong>Important! </strong>{{ session('passwordincorrect') }}
+                            </div>
+                        @endif
+                  @if (session('passnotnewpass'))
+                           <div class="alert alert-danger">
+								 <button type="button" class="close" data-dismiss="alert">×</button>
+							    <strong>Important! </strong>{{ session('passnotnewpass') }}
+                            </div>
+                        @endif
+                  @if (session('passwordconfirmed'))
+                           <div class="alert alert-danger">
+								 <button type="button" class="close" data-dismiss="alert">×</button>
+							    <strong>Important! </strong>{{ session('passwordconfirmed') }}
+                            </div>
+                        @endif
+                  @if (session('passwordlost'))
+                           <div class="alert alert-danger">
+								 <button type="button" class="close" data-dismiss="alert">×</button>
+							    <strong>Important! </strong>{{ session('passwordlost') }}
+                            </div>
+                        @endif
+                  @if (session('passwordset'))
+                           <div class="alert alert-success">
+								 <button type="button" class="close" data-dismiss="alert">×</button>
+							    <strong>Bien! </strong>{{ session('passwordset') }}
+                            </div>
+                        @endif
+                 
                     <div class="row">
                     
                        <div class="col-md-12">
@@ -193,7 +211,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">N° telephone</label>
-                          <input type="tel" class="form-control" name="tel" required value="{{$user->tel}}">
+                          <input type="tel" class="form-control" name="tel" value="{{$user->tel}}">
                         </div>
                       </div>
                   </div>
@@ -201,19 +219,19 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Ancien mot de passe</label>
-                          <input type="password" class="form-control" name="pass" required>
+                          <input type="password" class="form-control" name="pass" >
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Nouveau mot de passe</label>
-                          <input type="password" class="form-control" name="newpass" required>
+                          <input type="password" class="form-control" name="newpass" >
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Confirmer mot de passe</label>
-                          <input type="password" class="form-control" name="confirmpass" required>
+                          <input type="password" class="form-control" name="confirmpass" >
                         </div>
                       </div>
                   </div>
