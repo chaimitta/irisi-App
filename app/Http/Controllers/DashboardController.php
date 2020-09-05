@@ -15,12 +15,17 @@ class DashboardController extends Controller
     {
         $this->middleware('auth');
     }
+
+    //la fonction qui affiche les espaces d'authentification selon la nature de user
     public function index(){
         $user = Auth::user();
         $categorie = $user->categorie;
+        //si le user est l'administrateur
         if ($categorie == "1"){
             return redirect('/dashboard/adminProfesseur');
         }
+
+        //si le user est un professeur
         else if ($categorie == "2")
         {
         $id=$user->id;
@@ -29,11 +34,13 @@ class DashboardController extends Controller
         $idProfesseur=$professeur2->get(0)->id;
          
         $has=DB::table('enseignes')->where('professeur_id',$idProfesseur)->count();
+        //le professeur n'est pas encore affecté à un module
         if($has==0){
             $message="Désolé ,Vous n'étes pas encore affecté à aucun module .";
             
             return view('Dashboard/professeur/dashboard',compact('user'),compact('message'));
         }
+          //le professeur a été déjà pas encore affecté à un module
         elseif($has>0)
         {
 
@@ -43,6 +50,7 @@ class DashboardController extends Controller
             'id_professeur' => $idProfesseur,));
 
         $count = DB::table('annee_univs')->select('id')->where('current',1)->count();
+        //aucune année académique spécifiée
         if($count <= 0 ){
             return view('Dashboard/professeur/dashboard',compact('user'),['resultat'=>$resultat]);
         }
@@ -55,7 +63,8 @@ class DashboardController extends Controller
             
         }
     }
-         
+
+        //si l'utilisateur est un étudiant
         else{
           
             $studentId = DB::table('etudiants')->select('id')->where('user_id', $user->id)->get();
@@ -66,7 +75,7 @@ class DashboardController extends Controller
             ));
             $semestre_id = $results[0]->semestre_id;
             $niveau_id = $results[0]->niveau_id;
-    
+            //on recupere la liste des modules du semestre courant
             $modules = DB::select(DB::raw("SELECT * FROM enseignes,modules 
             WHERE enseignes.module_id = modules.id and enseignes.semestre_id = :semestre_id
              and enseignes.niveau_id = :niveau_id"), array(

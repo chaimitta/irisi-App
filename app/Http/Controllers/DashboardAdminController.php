@@ -12,23 +12,25 @@ use Illuminate\Http\Request;
 
 class DashboardAdminController extends Controller
 {
+     //la fonction qui affiche le tableau de bord l'admin et la liste des professeurs
      public function index()
      {
       $user= Auth::user();
-  
+      //on recupere la liste des professeurs
      $prof = DB::select(DB::raw("SELECT users.nom,users.prenom,users.tel,users.email,professeurs.id
       FROM users,professeurs
       WHERE  users.id = professeurs.user_id and professeurs.deleted = 0"));
-     return view('Dashboard/admin/dashboard',['prof' =>$prof,'user'=>$user]);
-        
+     return view('Dashboard/admin/dashboard',['prof' =>$prof,'user'=>$user]);    
      }
 
+     
+     //la fonction qui affiche la liste des étudiants
      public function show(Request $request)
      {
       $user= Auth::user();
       if(request()->niveau){
           $niveau=$request->niveau;
-
+     //on recupere la liste des étudiants
       $resultat = DB::select(DB::raw("select cne,code_apogee,nom,prenom,email,tel,password,etudiants.id,adresse,date_naissance from etudiants,users,liste_etudiants 
       where liste_etudiants.etudiant_id=etudiants.id and liste_etudiants.niveau_id=:niveau and 
       users.id=etudiants.user_id and etudiants.deleted = 0"),array( 'niveau'=>$niveau,));
@@ -37,14 +39,17 @@ class DashboardAdminController extends Controller
         
      }
      return view('Dashboard/admin/dashboard2',['user'=>$user]);
-        
      }
 
+
+     //la fonction qui affiche un formulaire à l'admin pour ajouter un professeur
      public function showAjoutProf(){
           $user= Auth::user();
           return view('Dashboard/admin/ajouterProf',['user'=>$user]);
      }
 
+
+     //la fonction qui ajoute un professeur
      public function ajoutProf(Request $request){
           $user= Auth::user();
         $nom = $request->nom;
@@ -53,11 +58,13 @@ class DashboardAdminController extends Controller
         $email = $request->email;
         $pass = $request->pass;
         $confirmpass = $request->confirmpass;
-
+        
+        //le mot de passe donné n'été pas bien confirmé
         if($pass != $confirmpass){
           $message = "Informations  invalides,Une erreur s'est produite. Veuillez réessayez";
           return view('Dashboard/admin/ajouterProf',compact('message'),compact('user'));
       }
+      //le mot de passe a été bien confirmé
       else{
            $count =  DB::table('users')
            ->insert([
@@ -82,11 +89,17 @@ class DashboardAdminController extends Controller
       }
   }
 
+
+
+  //la fonction qui affiche un formulaire à l'admin pour ajouter un étudiant
   public function showAjoutEtud(){
      $user= Auth::user();
      return view('Dashboard/admin/ajouterEtud',['user'=>$user]);
 }
 
+
+
+//la fonction qui ajoute un étudiant
 public function ajoutEtud(Request $request){
      $user= Auth::user();
    $nom = $request->nom;
@@ -100,13 +113,14 @@ public function ajoutEtud(Request $request){
    $semestre = $request->semestre;
 
           $countt = DB::table('annee_univs')->select('id')->where('current',1)->count();
+          //aucune année académique spécifiée
           if($countt <= 0 ){
                $message3 = "Aucune année académique spécifiée!";
                return view('Dashboard/admin/ajouterEtud',compact('user'),compact('message3'));
           }
 
           else{
-               
+     //on ajoute les informations    
       $count =  DB::table('users')
       ->insert([
            'nom' => $nom,
@@ -127,6 +141,7 @@ public function ajoutEtud(Request $request){
                 'date_naissance' => $date,
                 'adresse' => $adress,
                 ]);
+                
           $etudiant_id = DB::table('etudiants')->select('id')->where('user_id',$user2->id)->get()->get(0);
               $annee2 = DB::table('annee_univs')->select('id')->where('current',1)->get()->get(0);
 

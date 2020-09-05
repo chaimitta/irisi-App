@@ -21,6 +21,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    //la fonction qui affiche la page d'accueil
     public function index()
     {
         return view('welcome');

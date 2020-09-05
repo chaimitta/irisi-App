@@ -10,10 +10,13 @@ use Illuminate\Support\Facades\Validator;
 
 class CheckController extends Controller
 {
+    //la fonction qui affiche la page de vérification
     public function index(){
         return view('auth/passwords/check');
     }
 
+
+    //la fonction qui vérifie les informations données par l'etudiant
     protected function validator(Request $request)
     {
          $cne = $request->cne;
@@ -25,10 +28,12 @@ class CheckController extends Controller
                  ->where('code_apogee', $code)
                  ->where('date_naissance', $dateBirth);
          })->count();
+         //les inforamtions données ne correspond à aucun étudiant
          if($n != 1){
              $message_error = "Informations de connexion invalides. Veuillez réessayez";
              return view('auth/passwords/check',compact('message_error'));
          }
+         //les inforamtions données correspond à un étudiant
          else{
              $user = DB::table('etudiants')->select('user_id','deleted')->where(function ($query) use ($dateBirth, $code, $cne) {
                  $query->where('cne', $cne)
@@ -40,11 +45,14 @@ class CheckController extends Controller
                  $message_error = "Informations de connexion invalides,Une erreur s'est produite. Veuillez réessayez";
                  return view('auth/passwords/check',compact('message_error'));
              }
+             //le compte a été supprimé par l'admin
              else{
                  if($user->get(0)->deleted !=0){
                     $message_error2 = "Votre compte a été supprimé. Veuillez contacter l'administrateur!";
                     return view('auth/passwords/check',compact('message_error2'));
-                 }else{
+                 }
+                 //on passe à l'inscription
+                 else{
 
                      $id = $user->get(0)->user_id;
     

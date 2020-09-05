@@ -7,15 +7,16 @@ use Illuminate\Http\Request;
 
 class EditController extends Controller
 {
+    //la fonction qui affiche la à l'admin un formulaire pour modifier un professeur
     public function showEditProf($id){
         $user= Auth::user();
         $prof_id = $id;
         $profUser = DB::table('professeurs')->select('user_id')->where('id',$prof_id)->get()->get(0);
-      
+        
         if(!isset($profUser->user_id)){
             return redirect('/dashboard/adminProfesseur');
         }
-
+        //on récupere les information du professeur
         $prof = DB::table('users')->select('nom','prenom','tel','id')->where('id',$profUser->user_id)->get()->get(0);
 
         if(!isset($prof)){
@@ -26,11 +27,13 @@ class EditController extends Controller
     }
 
 
+
+    //la fonction qui édite un professeur
     public function editProf(Request $request){
         $user= Auth::user();
         $prof_id = $request->prof_id;
         $profUser = $request->user_id;
-
+        //on change les informations du professeur
         $count =  DB::table('users')->where('id', $profUser)
         ->update([
             'nom' => $request->nomProf,
@@ -38,7 +41,7 @@ class EditController extends Controller
             'tel' =>$request->telProf,
             ]);
             
-          
+    //on recupere les nouvelles informations du professeur
       $prof = DB::table('users')->select('nom','prenom','tel','id')->where('id',$profUser)->get()->get(0);
 
     if($count == 0){
@@ -58,6 +61,9 @@ class EditController extends Controller
     
 }
 
+
+
+//la fonction qui affiche un formulaire à l'admin pour modifier un étudiant
 public function showEditEtud($id){
     $user= Auth::user();
 
@@ -66,7 +72,7 @@ public function showEditEtud($id){
     if(!isset($etud)){
         return redirect('/dashboard/adminEtudiant');
     }
-
+    //on recupere les informations de l'etudiant
     $etudUser = DB::table('users')->select('id','nom','prenom','tel')->where('id',$etud->user_id)->get()->get(0);
 
     if(!isset($etudUser)){
@@ -76,18 +82,20 @@ public function showEditEtud($id){
     return view('Dashboard/admin/editEtud',compact('user'),['etud'=>$etud,'etudUser'=>$etudUser]);
 }
 
+
+//la fonction qui modifie l'étudiant
 public function editEtud(Request $request){
     $user= Auth::user();
     $etud_id = $request->etud_id;
   
     $user_id = $request->user_id;
-    
-     $count =  DB::table('users')->where('id', $user_id)
-    ->update([
-         'nom' => $request->nomEtud,
-         'prenom' =>$request->prenomEtud,
-         'tel' =>$request->telEtud,
-         ]);
+    //on change les informations de l'étudiant
+        $count =  DB::table('users')->where('id', $user_id)
+        ->update([
+            'nom' => $request->nomEtud,
+            'prenom' =>$request->prenomEtud,
+            'tel' =>$request->telEtud,
+            ]);
 
          $count1 =  DB::table('etudiants')->where('id', $etud_id)
          ->update([
@@ -96,7 +104,8 @@ public function editEtud(Request $request){
               'adresse' =>$request->adresseEtud,
               'date_naissance' =>$request->date_naissanceEtud,
               ]);
-
+            
+              //on recupere les nouvelles informations
               $etud = DB::table('etudiants')->select('id','cne','code_apogee','adresse','user_id','date_naissance')->where('id',$etud_id)->get()->get(0);
               $etudUser = DB::table('users')->select('id','nom','prenom','tel')->where('id',$etud->user_id)->get()->get(0);
 

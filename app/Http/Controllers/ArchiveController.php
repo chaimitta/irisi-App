@@ -6,15 +6,17 @@ use DB;
 use Illuminate\Http\Request;
 
 class ArchiveController extends Controller
-{
+{   
+    //la fonction qui affiche la liste des professeurs et des étudiants archivées
     public function archive()
     {
         $user= Auth::user();
-    
+        //on recupere la liste des professeurs
         $prof = DB::select(DB::raw("SELECT users.nom,users.prenom,users.tel,users.email,professeurs.id
         FROM users,professeurs
         WHERE  users.id = professeurs.user_id and professeurs.deleted = 1"));
 
+        //on recupere la liste des etudiants
         $etud = DB::select(DB::raw("SELECT users.nom,users.prenom,users.tel,etudiants.id,cne,code_apogee
         FROM users,etudiants
         WHERE  users.id = etudiants.user_id and etudiants.deleted = 1"));
@@ -23,6 +25,9 @@ class ArchiveController extends Controller
        
     }
 
+
+
+    //la fonction qui affiche à l'admin un formulaire pour restaurer l'etudiant à un niveau et à un semestre
     public function showrestoreEtud($id){
         $user= Auth::user();
         $count = DB::table('etudiants')->select('user_id')->where('id',$id)->get()->get(0);
@@ -31,6 +36,8 @@ class ArchiveController extends Controller
         return view('Dashboard/admin/store',['etudiant_id' =>$id,'user'=>$user,'etud'=>$etud]);
     }
 
+
+    //la fonction qui permet de restaurer un professeur
     public function restoreProf($id){
         $user= Auth::user();
 
@@ -38,19 +45,23 @@ class ArchiveController extends Controller
         ->update([
             'deleted'=> 0,
         ]);
+        //echec de la mise à jour
         if($count != 1){
         $message = "Un problème est servenue, veuillez réessayer!";
 
+        //recupere la liste des professeurs
         $prof = DB::select(DB::raw("SELECT users.nom,users.prenom,users.tel,users.email,professeurs.id
         FROM users,professeurs
         WHERE  users.id = professeurs.user_id and professeurs.deleted = 1"));
-   
-       $etud = DB::select(DB::raw("SELECT users.nom,users.prenom,users.tel,etudiants.id,cne,code_apogee
-       FROM users,etudiants
-       WHERE  users.id = etudiants.user_id and etudiants.deleted = 1"));
+
+        //recupere la liste des etudiants
+        $etud = DB::select(DB::raw("SELECT users.nom,users.prenom,users.tel,etudiants.id,cne,code_apogee
+        FROM users,etudiants
+        WHERE  users.id = etudiants.user_id and etudiants.deleted = 1"));
        
        return view('Dashboard/admin/archive',['message'=>$message,'prof' =>$prof,'etud' =>$etud,'user'=>$user]);
         }
+        //le professeur a été restauré
         else{
             $message2 = "le professeur a été restauré avec succès!";
 
@@ -67,6 +78,8 @@ class ArchiveController extends Controller
     }
     
 
+    
+    //la fonction qui permet de restaurer un etudiant
     public function restoreEtud(Request $request){
         $user= Auth::user();
         $niveau_int = $request->niveau;
@@ -77,6 +90,7 @@ class ArchiveController extends Controller
         $etud = DB::table('users')->select('nom','prenom')->where('id',$do->user_id)->get()->get(0);
         
         $count = DB::table('annee_univs')->select('id')->where('current',1)->count();
+        //aucune année académique spécifiée
         if($count <= 0 ){
              $message = "Aucune année académique spécifiée!";
              return view('Dashboard/admin/store',['user'=>$user,'message'=>$message,'etud'=>$etud,'etudiant_id'=>$etudiant_id]);
@@ -111,6 +125,7 @@ class ArchiveController extends Controller
                  'etudiant_id' => $etudiant_id,
                  ]);
 
+                 //on annule la suppression de l'etudiant
                  $listEtud = DB::table('etudiants')->where('id',$etudiant_id)
                  ->update([
                       'deleted' => 0,
