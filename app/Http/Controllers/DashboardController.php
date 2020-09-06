@@ -34,13 +34,12 @@ class DashboardController extends Controller
         $idProfesseur=$professeur2->get(0)->id;
          
         $has=DB::table('enseignes')->where('professeur_id',$idProfesseur)->count();
-        //le professeur n'est pas encore affecté à un module
+ 
         if($has==0){
             $message="Désolé ,Vous n'étes pas encore affecté à aucun module .";
             
-            return view('Dashboard/professeur/dashboard',compact('user'),compact('message'));
+            return view('Dashboard/professeur/dashboard',compact('user'),['message'=>$message,'nbr_modules'=>0]);
         }
-          //le professeur a été déjà pas encore affecté à un module
         elseif($has>0)
         {
 
@@ -50,20 +49,21 @@ class DashboardController extends Controller
             'id_professeur' => $idProfesseur,));
 
         $count = DB::table('annee_univs')->select('id')->where('current',1)->count();
-        //aucune année académique spécifiée
-        if($count <= 0 ){
-            return view('Dashboard/professeur/dashboard',compact('user'),['resultat'=>$resultat]);
+        // calcul du nombre de modules  affectés
+        $nbr_modules=Enseigne::where('professeur_id', $idProfesseur)->count();
+        
+          if($count == 0 ){
+            return view('Dashboard/professeur/dashboard',compact('user'),['resultat'=>$resultat,'nbr_modules'=>$nbr_modules]);
         }
         else{
             $anne = DB::table('annee_univs')->select('int_annee')->where('current',1)->get()->get(0);
        
             $anne_univ=$anne->int_annee;
-           return view('Dashboard/professeur/dashboard',compact('user'),['resultat'=>$resultat,'anne_univ'=>$anne_univ]);
+           return view('Dashboard/professeur/dashboard',compact('user'),['resultat'=>$resultat,'anne_univ'=>$anne_univ,'nbr_modules'=>$nbr_modules]);
         }
             
         }
     }
-
         //si l'utilisateur est un étudiant
         else{
           

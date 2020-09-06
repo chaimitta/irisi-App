@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Exports\NotesExports;
+use App\Exports\NotesEtudiant;
+
+use App\Note;
 use Session;
 use Illuminate\Support\Facades\Auth;
 use Redirect;
@@ -78,37 +82,25 @@ class NotesController extends Controller
 
     //la fonction qui affiche les notes d'un module à un étudiant
       public function voir_etudiant($libelle){
-        $user = Auth::user();
-        $studentId = DB::table('etudiants')->select('id')->where('user_id', $user->id)->get() ;
-        $id = $studentId->get(0)->id;
-        $idModule = DB::table('modules')->select('id')->where('libelle', $libelle)->get()->get(0)->id;
-
-        //on teste si jamais aucune note a été ajoutée pour ce module
-        $res = DB::table('notes')->select('id')->where(function($query) use($id,$idModule){
-            $query->where('etudiant_id',$id)
-                ->where('module_id',$idModule);
-        })->count() ;
         
-        //aucune note ajoutée pour ce module
-        if($res <= 0){
-            $message = "aucune note ajoutée";
-            return view('Dashboard/etudiant/listeNotes',['message'=>$message,'libelle'=>$libelle]);
-        }
-        //on récupére les notes
-        else{
-
-            $resultat = DB::select(DB::raw(" 
-            select C1,C2 from notes 
-            where etudiant_id=:idE and  module_id=:idM
-            "), array(
-                 'idE'=>$id,
-                 'idM'=>$idModule,
-                 
-                 
-              ));
-      
-              return view('Dashboard/etudiant/listeNotes',['resultat'=>$resultat,'libelle'=>$libelle]);
-        }
+            $user = Auth::user();
+            $studentId = DB::table('etudiants')->select('id')->where('user_id', $user->id)->get() ;
+            $id = $studentId->get(0)->id;
+            $query=DB::select(DB::raw("select * from notes,modules where notes.module_id=modules.id and notes.etudiant_id=?"),[
+                $id
+            ]);
+            if(count($query)==0){
+                return back()->with('msg',3);
+            }
+    else{
+    ini_set('max_execution_time', 180); //3 minutes
+     Session::put('idEtudiant',$id);
+     $nom_fichier=$user->nom.$user->prenom.'.xlsx';
+        return Excel::download(new NotesEtudiant, $nom_fichier);
+    
+       
+    
+    }
 
     }
 

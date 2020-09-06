@@ -26,6 +26,7 @@
 
     <!-- Main Stylesheet File -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    @yield('login_styles')
 
 </head>
 <body >
@@ -77,7 +78,7 @@
         </nav><!-- #nav-menu-container -->
     </div>
 </header><!--header-->
-        <main class="py-4">
+        <main class="py-5">
             @yield('content')
        </main>
 </div>
@@ -87,6 +88,7 @@
 <script src="{{ asset('lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('lib/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('lib/bootstrap/js/bootstrap.min.js') }}"></script>
+@yield('myscripts')
 
 </body>
 
