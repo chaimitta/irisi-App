@@ -13,5 +13,23 @@
     padding-bottom: 4em;
     background-color: rgba(black,black,black,0.5) !important;
 }
-
+main{
+    background-image: url('/img/bg/bg6.jpg');
+    background-position: center;
+    background-size: cover;
+    /* background-color: rgba(0, 0, 0, 0.5); */
  
+}
+section{
+ padding-top: 10px;
+ MARGIN-TOP: -15px;
+
+background-color: rgba(0, 0, 0, 0.3);
+ }
+.form-control input {
+     width: 50% !important;
+}
+.inscription.card.card-primary
+{width: 70%;
+    margin-right: 50px !important;
+    margin-left: 100px}
