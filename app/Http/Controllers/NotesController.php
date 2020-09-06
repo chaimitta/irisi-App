@@ -81,7 +81,7 @@ class NotesController extends Controller
 
 
     //la fonction qui affiche les notes d'un module à un étudiant
-      public function voir_etudiant($libelle){
+      public function voir_etudiant(){
         
             $user = Auth::user();
             $studentId = DB::table('etudiants')->select('id')->where('user_id', $user->id)->get() ;
