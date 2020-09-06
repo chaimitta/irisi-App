@@ -10,12 +10,12 @@ class ListeStudentsController extends Controller
 {
 
     //la fonction qui affiche la liste des étudiants au professeur pour un niveau et un semestre
-     public function index(Request $request)
+     public function index($niveau, $semestre)
      {
         
-        $idN=request('idN');
-        $idS=request('idS');
-      
+        $idN=$niveau;
+        $idS=$semestre;
+        // dd($idN);
             $resultat = DB::select(DB::raw("SELECT * FROM liste_etudiants,etudiants,users,niveaux,semestres
             WHERE  semestres.id=:idSe and niveaux.id=:idNi and liste_etudiants.semestre_id=:idS 
             and liste_etudiants.niveau_id=:idN and liste_etudiants.etudiant_id =etudiants.id 

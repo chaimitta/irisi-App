@@ -13,10 +13,9 @@ use RealRashid\SweetAlert\Facades\Alert;
 class ListeCoursController extends Controller
 {
     //la fonction qui affiche la list des cours
-    public function index(Request $request)
+    public function index($niveau, $libelle)
     {
-        $idNiveau = $request->idNiveau;
-        $libelle  = $request->libelleModule;
+        $idNiveau = $niveau;
     
         Session::put('idNiveau', $idNiveau);
         Session::put('libelle', $libelle);

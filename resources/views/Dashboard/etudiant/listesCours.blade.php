@@ -21,13 +21,13 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <link href="../../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
 
 </head>
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="green" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="green" data-background-color="white" data-image="../../assets/img/sidebar-1.jpg">
      
       <div class="logo"> <a href="{{ url('/') }}" class="simple-text logo-normal  ">
           <img class="w-50" src="{{ url('img/logo.png') }}" alt="IRISI-App" title="IRISI-App" />
@@ -210,7 +210,7 @@
             </div>
           </div>
         </div>
-        <a class="dropdown-item" href="#" data-toggle="modal" id="btn2" data-target="#exampleModal2" style="display: block;">Déconnexion</a>
+        <a class="dropdown-item" href="#" data-toggle="modal" id="btn2" data-target="#exampleModal2" style="display: block;"></a>
 
 
         <div class="modal" tabindex="-1" role="dialog" id="exampleModal2" >

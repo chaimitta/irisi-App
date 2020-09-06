@@ -236,27 +236,16 @@
 
 
                     <div class="media-body">
-                      <form method="post" action="{{url('/cours')}}" id="form1">
-                        @csrf
+                     
+                        <a class="text-success text-center " href="{{url('/cours/'.$res->niveau_id.'/'.$res->libelle)}}"> {{$res->libelle}} </a>
 
-                        <input type="hidden" name="idNiveau" value="{{$res->niveau_id}}">
-
-                        <input type="hidden" name="libelleModule" value="{{$res->libelle}}">
-                        <a href="#" class="text-success text-center " onclick="document.getElementById('form1').submit()"> {{$res->libelle}} </a>
-
-
-
-                      </form>
                     </div>
+
+
                     <div class="media-progressbbar">
-                    <form method="Post"  action="{{url('/listeE')}}" id="form2" >
-                    @csrf
-                    <input type="hidden" value="{{$res->niveau_id}}" name="idN">
-                    <input type="hidden" value="{{$res->semestre_id}}" name="idS">
-                    <a href="#" class="btn btn-icon icon-left btn-dark" onclick="document.getElementById('form2').submit()"><i class="far fa-file"></i> liste des étudiants</a>
+                   
+                    <a href="{{url('/listeE/'.$res->niveau_id.'/'.$res->semestre_id)}}" class="btn btn-icon icon-left btn-dark"><i class="far fa-file"></i> liste des étudiants</a>
   
-                  </form>
- 
                     </div>
                    
                     <div class="media-progressbar">

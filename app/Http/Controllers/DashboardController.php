@@ -47,7 +47,7 @@ class DashboardController extends Controller
            WHERE  enseignes.module_id = modules.id and enseignes.semestre_id = semestres.id 
            and enseignes.niveau_id = niveaux.id and enseignes.professeur_id = :id_professeur;"), array(
             'id_professeur' => $idProfesseur,));
-
+            
         $count = DB::table('annee_univs')->select('id')->where('current',1)->count();
         // calcul du nombre de modules  affectés
         $nbr_modules=Enseigne::where('professeur_id', $idProfesseur)->count();

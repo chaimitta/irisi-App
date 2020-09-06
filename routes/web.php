@@ -22,7 +22,7 @@
   Route::post('/check','CheckController@validator')->name('checkPost.show');
 
  //********ListStudentsController*********
-  Route::post('/listeE', 'ListeStudentsController@index')->name('liste.show');
+  Route::get('/listeE/{niveau}/{semestre}', 'ListeStudentsController@index')->name('liste.show');
   Route::post('/cours','ListeCoursController@index');
   Route::get('/cours/ajouter_cours','ListeCoursController@ajout');
   Route::post('/import', 'ListeStudentsController@import')->name('import.show');
@@ -63,7 +63,7 @@
   Route::post('/dashboard/settingsEmplois', 'SettingController@emplois');
   
   //********ListCoursController*********
-  Route::get('/cours', 'ListeCoursController@index'); 
+  Route::get('/cours/{niveau}/{libelle}', 'ListeCoursController@index'); 
   Route::get('/etudiant-listeCours/{libelle}', 'ListeCoursController@showToEtud'); 
   Route::get('/cours2', 'ListeCoursController@index2'); 
   Route::get('/cours-edit/{nomCours}', 'ListeCoursController@showedit'); 
