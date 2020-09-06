@@ -210,7 +210,7 @@
             </div>
           </div>
         </div>
-        <a class="dropdown-item" href="#" data-toggle="modal" id="btn2" data-target="#exampleModal2" style="display: block;">Déconnexion</a>
+        <a class="dropdown-item" href="#" data-toggle="modal" id="btn2" data-target="#exampleModal2" style="display: block;"></a>
 
 
         <div class="modal" tabindex="-1" role="dialog" id="exampleModal2" >
