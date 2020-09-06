@@ -33,15 +33,15 @@ class NotesExports implements FromView
 
         $idModule = DB::table('modules')->where('libelle', $libelle)->get()->get(0)->id;
         $data= join(",",$data);
-         
-     $resultat = DB::select(DB::raw(" 
-      select DISTINCT nom,prenom,C1,C2 from users,etudiants ,notes 
-      where users.id=etudiants.user_id AND etudiants.deleted=0 AND notes.etudiant_id=etudiants.id AND
-       notes.module_id=:idModule   and etudiants.id IN (".$data.")
-      "), array(
-            'idModule' => $idModule,
-           
-        ));
+            
+        $resultat = DB::select(DB::raw(" 
+        select DISTINCT nom,prenom,C1,C2 from users,etudiants ,notes 
+        where users.id=etudiants.user_id AND etudiants.deleted=0 AND notes.etudiant_id=etudiants.id AND
+        notes.module_id=:idModule   and etudiants.id IN (".$data.")
+        "), array(
+                'idModule' => $idModule,
+            
+            ));
   
           $count=count($resultat);
 
