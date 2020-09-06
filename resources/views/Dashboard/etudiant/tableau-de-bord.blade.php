@@ -233,13 +233,6 @@
                 </div>
               
                 <div class="card-body">
-                @if(isset($message ))
-                <div class="alert alert-warning alert-dismissible fade show text-center">
-                 
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                       <h5>  {{$message }} </h5>
-                    </div>
-                    @endif
                   <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">

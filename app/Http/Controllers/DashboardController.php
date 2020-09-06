@@ -82,9 +82,8 @@ class DashboardController extends Controller
                 'semestre_id' => $semestre_id,
                 'niveau_id' => $niveau_id,
             ));
-            $messageAlerte="Pour voir vos notes cliquer sur le nom du module voulu.Merci !";
     
-            return view('Dashboard/etudiant/tableau-de-bord',['user'=>$user,'modules'=>$modules,'message'=>$messageAlerte,
+            return view('Dashboard/etudiant/tableau-de-bord',['user'=>$user,'modules'=>$modules,
             'semestre_id'=>$semestre_id,'niveau_id'=>$niveau_id]);
      
 

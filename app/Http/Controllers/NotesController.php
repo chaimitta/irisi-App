@@ -92,15 +92,15 @@ class NotesController extends Controller
             if(count($query)==0){
                 return back()->with('msg',3);
             }
-    else{
-    ini_set('max_execution_time', 180); //3 minutes
-     Session::put('idEtudiant',$id);
-     $nom_fichier=$user->nom.$user->prenom.'.xlsx';
-        return Excel::download(new NotesEtudiant, $nom_fichier);
-    
-       
-    
-    }
+        else{
+        ini_set('max_execution_time', 180); //3 minutes
+        Session::put('idEtudiant',$id);
+        $nom_fichier=$user->nom.$user->prenom.'.xlsx';
+            return Excel::download(new NotesEtudiant, $nom_fichier);
+        
+        
+        
+        }
 
     }
 
