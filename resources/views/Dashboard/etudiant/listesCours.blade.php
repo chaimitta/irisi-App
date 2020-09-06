@@ -40,7 +40,13 @@
               <p>Tableau de bord</p>
             </a>
           </li>
-         
+          <li class="nav-item  ">
+            <a class="nav-link" href="{{url('/notesEtudiant')}}" data-toggle="modal" data-target="#exampleModal">
+             
+              <i class="material-icons">content_paste</i>
+              <p>Notes</p>
+            </a>
+          </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{url('/dashboard/profile-etudiant')}}">
               <i class="material-icons">person</i>
@@ -185,12 +191,65 @@
   </div>
 
   </div>
-  <!--   Core JS Files   -->
-  <script src="../assets/js/core/jquery.min.js"></script>
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+  <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Notes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Pour obtenir la liste de vos notes ,veuillez cliquer sur "Obtenir".</p>
+              </div>
+              <div class="modal-footer ">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="{{route('notes.etudiant')}}" class="btn btn-primary">Obtenir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="dropdown-item" href="#" data-toggle="modal" id="btn2" data-target="#exampleModal2" style="display: block;">Déconnexion</a>
+
+
+        <div class="modal" tabindex="-1" role="dialog" id="exampleModal2" >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Notes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                @php
+             $msg=Session::get('msg')
+                @endphp
+                @if( $msg==3)
+                <p>Aucune note n'a été affectée.</p>
+                @endif
+              </div>
+              <div class="modal-footer ">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+          </div>
+        </div>
+  
+  <script src="{{asset('assets/js/core/jquery.min.js')}}"></script> 
+  <script src="{{asset('assets/js/core/popper.min.js')}}"></script>
+   
+  <script src="{{asset('assets/js/core/bootstrap-material-design.min.js')}}"></script>
+  
+    
+  <script src="{{asset('assets/js/material-dashboard.js?v=2.1.2')}}" type="text/javascript"></script>
+ @if($msg==3)
+ <script>
+  
+document.getElementById("btn2").click();
+ </script>
+ @endif
   <script>
 		$(document)
 				.ready(
@@ -216,6 +275,17 @@
 											});
 						});
 	</script>
+ 
+  <!-- Template JS File -->
+ 
+  <!-- JS Libraies -->
+ <script>$("[data-background]").each(function() {
+    var me = $(this);
+    me.css({
+      backgroundImage: 'url(' + me.data('background') + ')'
+    });
+  });
+</script>
 </body>
 
 </html>
