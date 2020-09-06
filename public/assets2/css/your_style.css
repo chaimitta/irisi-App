@@ -1,0 +1,17 @@
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: orange;
+    outline: 0;
+ 
+}
+.login{
+    background-image:url('/img/bg/bg6.jpg');
+        background-size:cover;background-position:center;
+}
+#header{
+    padding-bottom: 4em;
+    background-color: rgba(black,black,black,0.5) !important;
+}
+
+ 

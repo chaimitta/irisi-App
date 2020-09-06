@@ -87,7 +87,7 @@
   //********NotesController*********
 Route::get('/voir_notes/{libelle}/{idNiveau}/{idSemestre}','NotesController@export'  );
 Route::get('/notes','NotesController@index'  );
-Route::get('/voir_etudiant/{libelle}','NotesController@voir_etudiant'  );
+Route::get('/voir_etudiant','NotesController@voir_etudiant')->name('notes.etudiant');
 Route::get('/ajouter_notes/{libelle}/{idNiveau}/{idSemestre}','NotesController@ajouter_notes'  );
 Route::post('/ajouter_notes2/{libelle}/{idSemestre}/{idNiveau}','NotesController@ajouter_notes2'  );
 

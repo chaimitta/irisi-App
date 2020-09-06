@@ -1,83 +1,98 @@
 @extends('layouts.app')
+@section('login_styles')
+<!-- General CSS Files -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+<link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
 
-@section('content')
-<
-    <br><br>
-    <div class="content">
-        <div class="container">
-            <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-            @if(isset($messageErr))
-              <div class="alert alert-danger alert-dismissible fade show text-center">
-                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                    <strong>Erreur:</strong> {{$messageErr}}
-                                </div>
-            @endif
-                <form class="form" method="POST" action="{{ route('login') }}">
-                    @csrf
-                    <div class="card card-login">
-                        <div class="card-header ">
-                            <div class="card-header ">
-                                <h3 class="header text-center" style="color: orange">Connectez vous</h3>
-                            </div>
-                        </div>
-                        <div class="card-body ">
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="nc-icon nc-single-02"></i>
-                                    </span>
-                                </div>
-                                <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('Email') }}" type="email" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" style="display: block;" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="nc-icon nc-single-02"></i>
-                                    </span>
-                                </div>
-                                <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Mot de passe') }}" type="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" style="display: block;" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                            <br>
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" name="remember" type="checkbox" value="" {{ old('remember') ? 'checked' : '' }}>
-                                        <span class="form-check-sign"></span>
-                                        {{ __('Rester connecté') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card-footer">
-                                <button type="submit" class="btn btn-success btn-block btn">{{ __('Connexion') }}</button>
-                        </div>
-                    </div>
-                    <br>@if (Route::has('password.request'))
-                                <a  href="{{ route('password.request') }}" style="color: green">
-                                    Mot de passe oublié ?
-                                </a>
-                            @endif
-                </form>
-            </div>
-        </div>
-    </div>
+<link rel="stylesheet" href="assets2/css/style.css">
+<link rel="stylesheet" href="assets2/css/components.css">
+<link rel="stylesheet" href="assets2/css/your_style.css">
 
 @endsection
 
+@section('content')
+<div id="app">
+    <section class="section">
+        <div class="d-flex flex-wrap align-items-stretch">
+            <div class="col-lg-4 col-md-6 col-12 order-lg-1 min-vh-100 order-2 bg-white">
+                <div class="p-3 m-2 ">
+                    <h4 class="text-dark font-weight-normal text-center">Bienvenu dans <br /><span class="font-weight-bold text-center">IRISI-APP</span></h4>
+                  
+                    <br/>
+                    <p class="text-muted text-center">Avant commencer,vous devez vous connecter ou bien inscrivez vous si vous n'avez pas un compte.</p>
+                    <br/>
+                    
+                    
+                    <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
+                    @csrf  
+                    <div class="form-group">
+                    
+                            <label for="email">Email</label>
+                            <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"  type="email" name="email" value="{{ old('email') }}" required autofocus>
+                            @if ($errors->has('email'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                            @endif
+                            
+                        </div>
 
+                        <div class="form-group">
+                            <div class="d-block">
+                                <label for="password" class="control-label">Password</label>
+                            </div>
+                            <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password"  type="password" required autofocus>
+                            @if ($errors->has('password'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                            @endif
+                            
+                        </div>
 
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
+                                <label class="custom-control-label" for="remember-me">Se souvenir de Moi</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group text-center">
+ 
+                            <button type="submit" class="btn btn-primary btn-lg btn-icon icon-right " tabindex="4">
+                                Connecter
+                            </button>
+                        </div>
+
+                        <div class="mt-5 text-center">
+                            Vous n'avez pas un compte? <a href="{{route('check.show')}}">Vous pouvez le créer ici</a>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-5 text-small">
+                        Copyright &copy; IRISI-APP. Made with 💙 by Mery & Chaima
+
+                    </div>
+                </div>
+            </div>
+            <div class=" login col-lg-8 col-12  min-vh-100 background-walk-y position-relative overlay-gradient-bottom ">
+
+                <div class="absolute-bottom-left index-2">
+                    <div class="text-light p-5 pb-2">
+                        <div class="mb-5 pb-3">
+                            <h1 class="mb-2 display-4 font-weight-bold">Bienvenu,</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+ 
+    
+
+@endsection
